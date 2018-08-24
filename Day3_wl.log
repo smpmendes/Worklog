@@ -1,0 +1,1274 @@
+Script started on Tuesday 21 August 2018 06:42:05 PM IST
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ [K]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ #1. Check availability:
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ java -version
+java version "1.8.0_161"
+Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ echo $JAVA_HOME
+/usr/java/jdk1.8.0_162
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ mvn --version
+[1mApache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T13:28:13+05:30)[m
+Maven home: /opt/apache-maven-3.5.2
+Java version: 1.8.0_162, vendor: Oracle Corporation
+Java home: /usr/java/jdk1.8.0_162/jre
+Default locale: en_IN, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-112-generic", arch: "amd64", family: "unix"
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ whereis mvn
+mvn: /opt/apache-maven-3.5.2/bin/mvn.cmd /opt/apache-maven-3.5.2/bin/mvn
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ echo $PATH
+/home/osgdev/bin:/home/osgdev/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/java/jdk1.8.0_162/bin/:/opt/apache-maven-3.5.2/bin:/usr/java/jdk1.8.0_162/bin/:/opt/apache-maven-3.5.2/bin:/usr/java/jdk1.8.0_162/bin/:/opt/apache-maven-3.5.2/bin
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ #Create a folder to work on Maven:
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ mkdir mvnlab 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ cd mvnlab
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ #2. Generate a project archetype that would generate jar file:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ mvn \
+> archetype:generate \
+> -DgroupId=com.devops \
+> -DartifactId=Demo1 \
+> -DarchetypeArtifactId=maven-archetype-quickstart \
+> -DinteractiveMode=false
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Maven Stub Project (No POM) 1[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mmaven-archetype-plugin:3.0.1:generate[m [1m(default-cli)[0;1m > [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mmaven-archetype-plugin:3.0.1:generate[m [1m(default-cli)[0;1m < [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-archetype-plugin:3.0.1:generate[m [1m(default-cli)[m @ [36mstandalone-pom[0;1m ---[m
+[[1;34mINFO[m] Generating project in Batch mode
+[[1;34mINFO[m] ----------------------------------------------------------------------------
+[[1;34mINFO[m] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[[1;34mINFO[m] ----------------------------------------------------------------------------
+[[1;34mINFO[m] Parameter: basedir, Value: /home/osgdev/mvnlab
+[[1;34mINFO[m] Parameter: package, Value: com.devops
+[[1;34mINFO[m] Parameter: groupId, Value: com.devops
+[[1;34mINFO[m] Parameter: artifactId, Value: Demo1
+[[1;34mINFO[m] Parameter: packageName, Value: com.devops
+[[1;34mINFO[m] Parameter: version, Value: 1.0-SNAPSHOT
+[[1;34mINFO[m] project created from Old (1.x) Archetype in dir: /home/osgdev/mvnlab/Demo1
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 8.733 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:43:23+05:30
+[[1;34mINFO[m] Final Memory: 15M/150M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[0m]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ ls
+[0m[01;34mDemo1[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ tree Demo1
+[01;34mDemo1[00m
+├── pom.xml
+└── [01;34msrc[00m
+    ├── [01;34mmain[00m
+    │   └── [01;34mjava[00m
+    │       └── [01;34mcom[00m
+    │           └── [01;34mdevops[00m
+    │               └── App.java
+    └── [01;34mtest[00m
+        └── [01;34mjava[00m
+            └── [01;34mcom[00m
+                └── [01;34mdevops[00m
+                    └── AppTest.java
+
+9 directories, 3 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ cat Demo1/pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.devops</groupId>
+  <artifactId>Demo1</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Demo1</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ cat Demo1/src/main/java/com/devops/App.java
+package com.devops;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ cat Demo1/src/test/java/com/devops/AppTest.java
+package com.devops;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+        assertTrue( true );
+    }
+}
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ cd Demo1
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ mvn validate
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo1 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 0.178 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:46:13+05:30
+[[1;34mINFO[m] Final Memory: 6M/106M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ mvn compile
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo1 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 1 source file to /home/osgdev/mvnlab/Demo1/target/classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 5.198 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:46:45+05:30
+[[1;34mINFO[m] Final Memory: 13M/142M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ mvn compile^C
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ tree .
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   ├── [01;34mmain[00m
+│   │   └── [01;34mjava[00m
+│   │       └── [01;34mcom[00m
+│   │           └── [01;34mdevops[00m
+│   │               └── App.java
+│   └── [01;34mtest[00m
+│       └── [01;34mjava[00m
+│           └── [01;34mcom[00m
+│               └── [01;34mdevops[00m
+│                   └── AppTest.java
+└── [01;34mtarget[00m
+    ├── [01;34mclasses[00m
+    │   └── [01;34mcom[00m
+    │       └── [01;34mdevops[00m
+    │           └── App.class
+    └── [01;34mmaven-status[00m
+        └── [01;34mmaven-compiler-plugin[00m
+            └── [01;34mcompile[00m
+                └── [01;34mdefault-compile[00m
+                    ├── createdFiles.lst
+                    └── inputFiles.lst
+
+17 directories, 6 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ mvn clean
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo1 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/osgdev/mvnlab/Demo1/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 0.582 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:49:36+05:30
+[[1;34mINFO[m] Final Memory: 8M/106M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ tree
+[01;34m.[00m
+├── pom.xml
+└── [01;34msrc[00m
+    ├── [01;34mmain[00m
+    │   └── [01;34mjava[00m
+    │       └── [01;34mcom[00m
+    │           └── [01;34mdevops[00m
+    │               └── App.java
+    └── [01;34mtest[00m
+        └── [01;34mjava[00m
+            └── [01;34mcom[00m
+                └── [01;34mdevops[00m
+                    └── AppTest.java
+
+9 directories, 3 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ maven tst[K[Kest
+No command 'maven' found, did you mean:
+ Command 'aven' from package 'survex-aven' (universe)
+maven: command not found
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ maven test[C[C[1P[C[C[1P
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo1 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 1 source file to /home/osgdev/mvnlab/Demo1/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 1 source file to /home/osgdev/mvnlab/Demo1/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/osgdev/mvnlab/Demo1/target/surefire-reports
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit3/2.12.4/surefire-junit3-2.12.4.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit3/2.12.4/surefire-junit3-2.12.4.pom (1.7 kB at 1.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.12.4/surefire-providers-2.12.4.pom
+Progress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.12.4/surefire-providers-2.12.4.pom (2.3 kB at 7.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit3/2.12.4/surefire-junit3-2.12.4.jar
+Progress (1): 2.8/26 kBProgress (1): 5.5/26 kBProgress (1): 8.3/26 kBProgress (1): 11/26 kB Progress (1): 14/26 kBProgress (1): 16/26 kBProgress (1): 19/26 kBProgress (1): 22/26 kBProgress (1): 25/26 kBProgress (1): 26 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit3/2.12.4/surefire-junit3-2.12.4.jar (26 kB at 55 kB/s)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.devops.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 6.267 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:50:52+05:30
+[[1;34mINFO[m] Final Memory: 17M/139M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ tree
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   ├── [01;34mmain[00m
+│   │   └── [01;34mjava[00m
+│   │       └── [01;34mcom[00m
+│   │           └── [01;34mdevops[00m
+│   │               └── App.java
+│   └── [01;34mtest[00m
+│       └── [01;34mjava[00m
+│           └── [01;34mcom[00m
+│               └── [01;34mdevops[00m
+│                   └── AppTest.java
+└── [01;34mtarget[00m
+    ├── [01;34mclasses[00m
+    │   └── [01;34mcom[00m
+    │       └── [01;34mdevops[00m
+    │           └── App.class
+    ├── [01;34mmaven-status[00m
+    │   └── [01;34mmaven-compiler-plugin[00m
+    │       ├── [01;34mcompile[00m
+    │       │   └── [01;34mdefault-compile[00m
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── [01;34mtestCompile[00m
+    │           └── [01;34mdefault-testCompile[00m
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── [01;34msurefire-reports[00m
+    │   ├── com.devops.AppTest.txt
+    │   └── TEST-com.devops.AppTest.xml
+    └── [01;34mtest-classes[00m
+        └── [01;34mcom[00m
+            └── [01;34mdevops[00m
+                └── AppTest.class
+
+23 directories, 11 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ mvn clean package
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo1 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/osgdev/mvnlab/Demo1/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 1 source file to /home/osgdev/mvnlab/Demo1/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 1 source file to /home/osgdev/mvnlab/Demo1/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/osgdev/mvnlab/Demo1/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.devops.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Building jar: /home/osgdev/mvnlab/Demo1/target/Demo1-1.0-SNAPSHOT.jar
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 4.291 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:51:49+05:30
+[[1;34mINFO[m] Final Memory: 16M/134M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ tree
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   ├── [01;34mmain[00m
+│   │   └── [01;34mjava[00m
+│   │       └── [01;34mcom[00m
+│   │           └── [01;34mdevops[00m
+│   │               └── App.java
+│   └── [01;34mtest[00m
+│       └── [01;34mjava[00m
+│           └── [01;34mcom[00m
+│               └── [01;34mdevops[00m
+│                   └── AppTest.java
+└── [01;34mtarget[00m
+    ├── [01;34mclasses[00m
+    │   └── [01;34mcom[00m
+    │       └── [01;34mdevops[00m
+    │           └── App.class
+    ├── [01;31mDemo1-1.0-SNAPSHOT.jar[00m
+    ├── [01;34mmaven-archiver[00m
+    │   └── pom.properties
+    ├── [01;34mmaven-status[00m
+    │   └── [01;34mmaven-compiler-plugin[00m
+    │       ├── [01;34mcompile[00m
+    │       │   └── [01;34mdefault-compile[00m
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── [01;34mtestCompile[00m
+    │           └── [01;34mdefault-testCompile[00m
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── [01;34msurefire-reports[00m
+    │   ├── com.devops.AppTest.txt
+    │   └── TEST-com.devops.AppTest.xml
+    └── [01;34mtest-classes[00m
+        └── [01;34mcom[00m
+            └── [01;34mdevops[00m
+                └── AppTest.class
+
+24 directories, 13 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ tree .
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   ├── [01;34mmain[00m
+│   │   └── [01;34mjava[00m
+│   │       └── [01;34mcom[00m
+│   │           └── [01;34mdevops[00m
+│   │               └── App.java
+│   └── [01;34mtest[00m
+│       └── [01;34mjava[00m
+│           └── [01;34mcom[00m
+│               └── [01;34mdevops[00m
+│                   └── AppTest.java
+└── [01;34mtarget[00m
+    ├── [01;34mclasses[00m
+    │   └── [01;34mcom[00m
+    │       └── [01;34mdevops[00m
+    │           └── App.class
+    ├── [01;31mDemo1-1.0-SNAPSHOT.jar[00m
+    ├── [01;34mmaven-archiver[00m
+    │   └── pom.properties
+    ├── [01;34mmaven-status[00m
+    │   └── [01;34mmaven-compiler-plugin[00m
+    │       ├── [01;34mcompile[00m
+    │       │   └── [01;34mdefault-compile[00m
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── [01;34mtestCompile[00m
+    │           └── [01;34mdefault-testCompile[00m
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── [01;34msurefire-reports[00m
+    │   ├── com.devops.AppTest.txt
+    │   └── TEST-com.devops.AppTest.xml
+    └── [01;34mtest-classes[00m
+        └── [01;34mcom[00m
+            └── [01;34mdevops[00m
+                └── AppTest.class
+
+24 directories, 13 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ mvn verify
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo1 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/osgdev/mvnlab/Demo1/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.devops.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 2.820 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:53:15+05:30
+[[1;34mINFO[m] Final Memory: 13M/110M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ tree .
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   ├── [01;34mmain[00m
+│   │   └── [01;34mjava[00m
+│   │       └── [01;34mcom[00m
+│   │           └── [01;34mdevops[00m
+│   │               └── App.java
+│   └── [01;34mtest[00m
+│       └── [01;34mjava[00m
+│           └── [01;34mcom[00m
+│               └── [01;34mdevops[00m
+│                   └── AppTest.java
+└── [01;34mtarget[00m
+    ├── [01;34mclasses[00m
+    │   └── [01;34mcom[00m
+    │       └── [01;34mdevops[00m
+    │           └── App.class
+    ├── [01;31mDemo1-1.0-SNAPSHOT.jar[00m
+    ├── [01;34mmaven-archiver[00m
+    │   └── pom.properties
+    ├── [01;34mmaven-status[00m
+    │   └── [01;34mmaven-compiler-plugin[00m
+    │       ├── [01;34mcompile[00m
+    │       │   └── [01;34mdefault-compile[00m
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── [01;34mtestCompile[00m
+    │           └── [01;34mdefault-testCompile[00m
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── [01;34msurefire-reports[00m
+    │   ├── com.devops.AppTest.txt
+    │   └── TEST-com.devops.AppTest.xml
+    └── [01;34mtest-classes[00m
+        └── [01;34mcom[00m
+            └── [01;34mdevops[00m
+                └── AppTest.class
+
+24 directories, 13 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ tree .mvn verify[4Ptree .[Kmvn install
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo1 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo1[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo1/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/osgdev/mvnlab/Demo1/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.devops.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36mDemo1[0;1m ---[m
+[[1;34mINFO[m] Installing /home/osgdev/mvnlab/Demo1/target/Demo1-1.0-SNAPSHOT.jar to /home/osgdev/.m2/repository/com/devops/Demo1/1.0-SNAPSHOT/Demo1-1.0-SNAPSHOT.jar
+[[1;34mINFO[m] Installing /home/osgdev/mvnlab/Demo1/pom.xml to /home/osgdev/.m2/repository/com/devops/Demo1/1.0-SNAPSHOT/Demo1-1.0-SNAPSHOT.pom
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 2.982 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:53:58+05:30
+[[1;34mINFO[m] Final Memory: 15M/174M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls /home/osgdev/.m2/repository/com/devops/Demo1/1.0-SNAPSHOT
+[0m[01;31mDemo1-1.0-SNAPSHOT.jar[0m  Demo1-1.0-SNAPSHOT.pom  maven-metadata-local.xml  _remote.repositories
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ cd ..
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ mvn \
+> archetype:generate \
+> -DgroupId=com.devops \
+> -DartifactId=Demo2 \
+> -DarchetypeArtifactId=maven-archetype-webapp \
+> -DinteractiveMode=false
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Maven Stub Project (No POM) 1[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mmaven-archetype-plugin:3.0.1:generate[m [1m(default-cli)[0;1m > [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mmaven-archetype-plugin:3.0.1:generate[m [1m(default-cli)[0;1m < [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-archetype-plugin:3.0.1:generate[m [1m(default-cli)[m @ [36mstandalone-pom[0;1m ---[m
+[[1;34mINFO[m] Generating project in Batch mode
+[[1;34mINFO[m] ----------------------------------------------------------------------------
+[[1;34mINFO[m] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-webapp:1.0
+[[1;34mINFO[m] ----------------------------------------------------------------------------
+[[1;34mINFO[m] Parameter: basedir, Value: /home/osgdev/mvnlab
+[[1;34mINFO[m] Parameter: package, Value: com.devops
+[[1;34mINFO[m] Parameter: groupId, Value: com.devops
+[[1;34mINFO[m] Parameter: artifactId, Value: Demo2
+[[1;34mINFO[m] Parameter: packageName, Value: com.devops
+[[1;34mINFO[m] Parameter: version, Value: 1.0-SNAPSHOT
+[[1;34mINFO[m] project created from Old (1.x) Archetype in dir: /home/osgdev/mvnlab/Demo2
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 5.165 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:55:14+05:30
+[[1;34mINFO[m] Final Memory: 15M/145M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[0m]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ ls
+[0m[01;34mDemo1[0m  [01;34mDemo2[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ tree Demo2
+[01;34mDemo2[00m
+├── pom.xml
+└── [01;34msrc[00m
+    └── [01;34mmain[00m
+        ├── [01;34mresources[00m
+        └── [01;34mwebapp[00m
+            ├── index.jsp
+            └── [01;34mWEB-INF[00m
+                └── web.xml
+
+5 directories, 3 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ cat Demo2/pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.devops</groupId>
+  <artifactId>Demo2</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Demo2 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>Demo2</finalName>
+  </build>
+</project>
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ #14. Validate the project and review the folder structure:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab[00m$ cd Demo2
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ mvn validate
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo2 Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 0.220 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:59:56+05:30
+[[1;34mINFO[m] Final Memory: 6M/106M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #15. Compile the project and review the folder structure:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ mvn compile
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo2 Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 1.308 s
+[[1;34mINFO[m] Finished at: 2018-08-21T18:59:59+05:30
+[[1;34mINFO[m] Final Memory: 10M/107M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ tree .
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   └── [01;34mmain[00m
+│       ├── [01;34mresources[00m
+│       └── [01;34mwebapp[00m
+│           ├── index.jsp
+│           └── [01;34mWEB-INF[00m
+│               └── web.xml
+└── [01;34mtarget[00m
+    └── [01;34mclasses[00m
+
+7 directories, 3 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #16. Clean the project and review the folder structure:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ mvn clean
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo2 Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/osgdev/mvnlab/Demo2/target
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 0.614 s
+[[1;34mINFO[m] Finished at: 2018-08-21T19:00:02+05:30
+[[1;34mINFO[m] Final Memory: 7M/106M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ tree .
+[01;34m.[00m
+├── pom.xml
+└── [01;34msrc[00m
+    └── [01;34mmain[00m
+        ├── [01;34mresources[00m
+        └── [01;34mwebapp[00m
+            ├── index.jsp
+            └── [01;34mWEB-INF[00m
+                └── web.xml
+
+5 directories, 3 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #17. Test and review the folder structure. Since test cases are not as sociated, 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #just the corresponding folder structure gets created.
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ mvn test
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo2 Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo2/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 1.574 s
+[[1;34mINFO[m] Finished at: 2018-08-21T19:00:05+05:30
+[[1;34mINFO[m] Final Memory: 11M/110M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ tree .
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   └── [01;34mmain[00m
+│       ├── [01;34mresources[00m
+│       └── [01;34mwebapp[00m
+│           ├── index.jsp
+│           └── [01;34mWEB-INF[00m
+│               └── web.xml
+└── [01;34mtarget[00m
+    └── [01;34mclasses[00m
+
+7 directories, 3 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #18. Package the project and review the folder structure for the packa ge generated.
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ mvn clean package
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo2 Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/osgdev/mvnlab/Demo2/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo2/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:2.2:war[m [1m(default-war)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [Demo2] in [/home/osgdev/mvnlab/Demo2/target/Demo2]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Copying webapp resources [/home/osgdev/mvnlab/Demo2/src/main/webapp]
+[[1;34mINFO[m] Webapp assembled in [54 msecs]
+[[1;34mINFO[m] Building war: /home/osgdev/mvnlab/Demo2/target/Demo2.war
+[[1;34mINFO[m] WEB-INF/web.xml already added, skipping
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 3.744 s
+[[1;34mINFO[m] Finished at: 2018-08-21T19:00:12+05:30
+[[1;34mINFO[m] Final Memory: 15M/173M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ tree .
+[01;34m.[00m
+├── pom.xml
+├── [01;34msrc[00m
+│   └── [01;34mmain[00m
+│       ├── [01;34mresources[00m
+│       └── [01;34mwebapp[00m
+│           ├── index.jsp
+│           └── [01;34mWEB-INF[00m
+│               └── web.xml
+└── [01;34mtarget[00m
+    ├── [01;34mclasses[00m
+    ├── [01;34mDemo2[00m
+    │   ├── index.jsp
+    │   ├── [01;34mMETA-INF[00m
+    │   └── [01;34mWEB-INF[00m
+    │       ├── [01;34mclasses[00m
+    │       └── web.xml
+    ├── [01;31mDemo2.war[00m
+    └── [01;34mmaven-archiver[00m
+        └── pom.properties
+
+12 directories, 7 files
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #19. Verify the package generated:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ mvn verify
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo2 Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo2/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:2.2:war[m [1m(default-war)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [Demo2] in [/home/osgdev/mvnlab/Demo2/target/Demo2]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Copying webapp resources [/home/osgdev/mvnlab/Demo2/src/main/webapp]
+[[1;34mINFO[m] Webapp assembled in [44 msecs]
+[[1;34mINFO[m] Building war: /home/osgdev/mvnlab/Demo2/target/Demo2.war
+[[1;34mINFO[m] WEB-INF/web.xml already added, skipping
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 2.295 s
+[[1;34mINFO[m] Finished at: 2018-08-21T19:00:16+05:30
+[[1;34mINFO[m] Final Memory: 11M/173M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #20. Install the package in the local repository:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ mvn install
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mBuilding Demo2 Maven Webapp 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mDemo2[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/osgdev/mvnlab/Demo2/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-war-plugin:2.2:war[m [1m(default-war)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] Packaging webapp
+[[1;34mINFO[m] Assembling webapp [Demo2] in [/home/osgdev/mvnlab/Demo2/target/Demo2]
+[[1;34mINFO[m] Processing war project
+[[1;34mINFO[m] Copying webapp resources [/home/osgdev/mvnlab/Demo2/src/main/webapp]
+[[1;34mINFO[m] Webapp assembled in [44 msecs]
+[[1;34mINFO[m] Building war: /home/osgdev/mvnlab/Demo2/target/Demo2.war
+[[1;34mINFO[m] WEB-INF/web.xml already added, skipping
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36mDemo2[0;1m ---[m
+[[1;34mINFO[m] Installing /home/osgdev/mvnlab/Demo2/target/Demo2.war to /home/osgdev/.m2/repository/com/devops/Demo2/1.0-SNAPSHOT/Demo2-1.0-SNAPSHOT.war
+[[1;34mINFO[m] Installing /home/osgdev/mvnlab/Demo2/pom.xml to /home/osgdev/.m2/repository/com/devops/Demo2/1.0-SNAPSHOT/Demo2-1.0-SNAPSHOT.pom
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 2.394 s
+[[1;34mINFO[m] Finished at: 2018-08-21T19:00:20+05:30
+[[1;34mINFO[m] Final Memory: 11M/110M
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #21. Watch the package files in local repository:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls /home/osgdev/.m2/repository/com/devops/Demo2/
+[0m[01;34m1.0-SNAPSHOT[0m  maven-metadata-local.xml
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #1.0-SNAPSHOT maven-metadata-local.xml 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls /home/osgdev/.m2/repository/com/devops/Demo2/1.0-SNAPSHOT/
+Demo2-1.0-SNAPSHOT.pom  [0m[01;31mDemo2-1.0-SNAPSHOT.war[0m  maven-metadata-local.xml  _remote.repositories
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #Demo2-1.0-SNAPSHOT.pom maven-metadata-local.xml
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #Demo2-1.0-SNAPSHOT.war _remote.repositories
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #22. Use Jenkins to work with Maven JAR Project:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #Push the source code of project to remote git repository:
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ cd Demo1
+bash: cd: Demo1: No such file or directory
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls
+pom.xml  [0m[01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #pom.xml src
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git init
+Initialized empty Git repository in /home/osgdev/mvnlab/Demo2/.git/
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #Initialized empty Git repository in /home/osgdev/mvnlab/Demo1/.git/
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m  pom.xml  [01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #. .. .git pom.xml src
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git add .
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git commit -m "Commit jar project"
+[master (root-commit) e0d944f] Commit jar project
+ 7 files changed, 50 insertions(+)
+ create mode 100644 pom.xml
+ create mode 100644 src/main/webapp/WEB-INF/web.xml
+ create mode 100644 src/main/webapp/index.jsp
+ create mode 100644 target/Demo2.war
+ create mode 100644 target/Demo2/WEB-INF/web.xml
+ create mode 100644 target/Demo2/index.jsp
+ create mode 100644 target/maven-archiver/pom.properties
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git log
+[?1h=[33mcommit e0d944f5eff571384deabcc397cc3dd1b21f34f1[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 19:00:21 2018 +0530[m
+[m
+    Commit jar project[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ## Variables
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_log_d=/home/osgdev/Worklog/logs
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_wipro_id=serdeen
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_wipro_pwd=Escrever0u0u0u0u
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_wipro_email=sergio.mendes@wipro.com
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_git_proj=jarproject
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_git_url=https://topgear-training-gitlab.wipro.com/SERDEEN/$my_git_p roj.git
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ export my_log_d my_wipro_id my_wipro_pwd my_wipro_email my_git_proj my _git_url
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ cd ~/mvnlab/Demo1
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git remote add origin $my_git_url
+fatal: Not a git repository (or any of the parent directories): .git
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git push -u origin master
+fatal: Not a git repository (or any of the parent directories): .git
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls -la
+total 20
+drwxr-xr-x 4 osgdev docker 4096 Aug 21 18:51 [0m[01;34m.[0m
+drwxr-xr-x 4 osgdev docker 4096 Aug 21 18:55 [01;34m..[0m
+-rw-r--r-- 1 osgdev docker  633 Aug 21 18:43 pom.xml
+drwxr-xr-x 4 osgdev docker 4096 Aug 21 18:43 [01;34msrc[0m
+drwxr-xr-x 7 osgdev docker 4096 Aug 21 18:53 [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ cd Demo1
+bash: cd: Demo1: No such file or directory
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls
+pom.xml  [0m[01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ #pom.xml src
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ #Initialized empty Git repository in /home/osgdev/mvnlab/Demo1/.git/
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git init
+Initialized empty Git repository in /home/osgdev/mvnlab/Demo1/.git/
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m  pom.xml  [01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ #. .. .git pom.xml src
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git add .
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git commit -m "Commit jar project"
+[master (root-commit) 99e739c] Commit jar project
+ 13 files changed, 148 insertions(+)
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/com/devops/App.java
+ create mode 100644 src/test/java/com/devops/AppTest.java
+ create mode 100644 target/Demo1-1.0-SNAPSHOT.jar
+ create mode 100644 target/classes/com/devops/App.class
+ create mode 100644 target/maven-archiver/pom.properties
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+ create mode 100644 target/surefire-reports/TEST-com.devops.AppTest.xml
+ create mode 100644 target/surefire-reports/com.devops.AppTest.txt
+ create mode 100644 target/test-classes/com/devops/AppTest.class
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git log
+[?1h=[33mcommit 99e739c5c643c691569c8548bfb97b26c9ba53cd[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 19:28:24 2018 +0530[m
+[m
+    Commit jar project[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ cd ~/mvnlab/Demo1
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git remote add origin $my_git_url
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git push -u origin master
+Username for 'https://topgear-training-gitlab.wipro.com': serdeen
+Password for 'https://serdeen@topgear-training-gitlab.wipro.com': 
+Counting objects: 39, done.
+Delta compression using up to 2 threads.
+Compressing objects:   5% (1/19)   Compressing objects:  10% (2/19)   Compressing objects:  15% (3/19)   Compressing objects:  21% (4/19)   Compressing objects:  26% (5/19)   Compressing objects:  31% (6/19)   Compressing objects:  36% (7/19)   Compressing objects:  42% (8/19)   Compressing objects:  47% (9/19)   Compressing objects:  52% (10/19)   Compressing objects:  57% (11/19)   Compressing objects:  63% (12/19)   Compressing objects:  68% (13/19)   Compressing objects:  73% (14/19)   Compressing objects:  78% (15/19)   Compressing objects:  84% (16/19)   Compressing objects:  89% (17/19)   Compressing objects:  94% (18/19)   Compressing objects: 100% (19/19)   Compressing objects: 100% (19/19), done.
+Writing objects:   2% (1/39)   Writing objects:   5% (2/39)   Writing objects:   7% (3/39)   Writing objects:  10% (4/39)   Writing objects:  12% (5/39)   Writing objects:  15% (6/39)   Writing objects:  17% (7/39)   Writing objects:  20% (8/39)   Writing objects:  23% (9/39)   Writing objects:  25% (10/39)   Writing objects:  28% (11/39)   Writing objects:  30% (12/39)   Writing objects:  33% (13/39)   Writing objects:  35% (14/39)   Writing objects:  38% (15/39)   Writing objects:  41% (16/39)   Writing objects:  43% (17/39)   Writing objects:  46% (18/39)   Writing objects:  48% (19/39)   Writing objects:  51% (20/39)   Writing objects:  53% (21/39)   Writing objects:  56% (22/39)   Writing objects:  58% (23/39)   Writing objects:  61% (24/39)   Writing objects:  64% (25/39)   Writing objects:  66% (26/39)   Writing objects:  69% (27/39)   Writing objects:  71% (28/39)   Writing objects:  74% (29/39)   Writing objects:  76% (30/39)   Writing objects:  79% (31/39)   Writing objects:  82% (32/39)   Writing objects:  84% (33/39)   Writing objects:  87% (34/39)   Writing objects:  89% (35/39)   Writing objects:  92% (36/39)   Writing objects:  94% (37/39)   Writing objects:  97% (38/39)   Writing objects: 100% (39/39)   Writing objects: 100% (39/39), 5.92 KiB | 0 bytes/s, done.
+Total 39 (delta 0), reused 0 (delta 0)
+To https://topgear-training-gitlab.wipro.com/SERDEEN/jarproject.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ git push -u origin master[Kgit push -u origin master
+Username for 'https://topgear-training-gitlab.wipro.com': serdeen
+Password for 'https://serdeen@topgear-training-gitlab.wipro.com': 
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ pwd
+/home/osgdev/mvnlab/Demo1
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ wget localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar
+--2018-08-21 20:24:32--  http://localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar
+Resolving localhost (localhost)... ::1, 127.0.0.1
+Connecting to localhost (localhost)|::1|:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2082 (2.0K) [application/java-archive]
+Saving to: ‘Demo1-1.0-SNAPSHOT.jar’
+
+Demo1-1.0-SNAPSHOT.jar        0%[                                         ]       0  --.-KB/s               Demo1-1.0-SNAPSHOT.jar      100%[========================================>]   2.03K  --.-KB/s    in 0s      
+
+2018-08-21 20:24:32 (230 MB/s) - ‘Demo1-1.0-SNAPSHOT.jar’ saved [2082/2082]
+
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls -lrt
+total 16
+-rw-r--r-- 1 osgdev docker  633 Aug 21 18:43 pom.xml
+drwxr-xr-x 4 osgdev docker 4096 Aug 21 18:43 [0m[01;34msrc[0m
+drwxr-xr-x 7 osgdev docker 4096 Aug 21 18:53 [01;34mtarget[0m
+-rw-r--r-- 1 osgdev docker 2082 Aug 21 20:20 [01;31mDemo1-1.0-SNAPSHOT.jar[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ oo [K[K[Kll wget localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar [A
+ls: cannot access 'wget': No such file or directory
+ls: cannot access 'localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar': No such file or directory
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ll wget localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+ls: cannot access 'localhost:8080/job/jarproject/ws/target/Demo1-1.0-SNAPSHOT.jar': No such file or directory
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls -lrt
+total 16
+-rw-r--r-- 1 osgdev docker  633 Aug 21 18:43 pom.xml
+drwxr-xr-x 4 osgdev docker 4096 Aug 21 18:43 [0m[01;34msrc[0m
+drwxr-xr-x 7 osgdev docker 4096 Aug 21 18:53 [01;34mtarget[0m
+-rw-r--r-- 1 osgdev docker 2082 Aug 21 20:20 [01;31mDemo1-1.0-SNAPSHOT.jar[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls /var/lib/jenkins/workspace/
+[0m[01;34mILP-Maruthi[0m  [01;34mjarproject[0m  [01;34mjarproject@tmp[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ #ansible-demo asdf Build_Job_Bookstore GitShell jarproject 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls /var/lib/jenkins/workspace/jarproject/
+pom.xml  [0m[01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ #pom.xml src target 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ ls /var/lib/jenkins/workspace/jarproject/target/
+[0m[01;34mclasses[0m  [01;31mDemo1-1.0-SNAPSHOT.jar[0m  [01;34mmaven-archiver[0m  [01;34mmaven-status[0m  [01;34msurefire-reports[0m  [01;34mtest-classes[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ #classes maven-archiver surefire-reports
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ #Demo1-1.0-SNAPSHOT.jar maven-status test-classes
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo1[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo1[00m$ cd ~/mvnlab/Demo2 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls
+pom.xml  [0m[01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #pom.xml src 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git init
+Reinitialized existing Git repository in /home/osgdev/mvnlab/Demo2/.git/
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #Initialized empty Git repository in /home/osgdev/mvnlab/Demo2/.git/
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m  pom.xml  [01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ . .. .git pom.xml src 
+bash: .: ..: is a directory
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git add . 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_git_proj=warproject
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ my_git_url=https://topgear-training-gitlab.wipro.com/SERDEEN/$my_git_p roj.git
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ export my_git_proj my_git_url
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git commit -m "$my_git_proj"
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls -la
+total 24
+drwxr-xr-x 5 osgdev docker 4096 Aug 21 19:00 [0m[01;34m.[0m
+drwxr-xr-x 4 osgdev docker 4096 Aug 21 18:55 [01;34m..[0m
+drwxr-xr-x 8 osgdev docker 4096 Aug 21 20:28 [01;34m.git[0m
+-rw-r--r-- 1 osgdev docker  700 Aug 21 18:55 pom.xml
+drwxr-xr-x 3 osgdev docker 4096 Aug 21 18:55 [01;34msrc[0m
+drwxr-xr-x 5 osgdev docker 4096 Aug 21 19:00 [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls -lagit commit -m "$my_git_proj"ls -la[K[Kgit log
+[?1h=[33mcommit e0d944f5eff571384deabcc397cc3dd1b21f34f1[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 19:00:21 2018 +0530[m
+[m
+    Commit jar project[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ eco [K[Kho $my_git_url=https
+https://topgear-training-gitlab.wipro.com/SERDEEN/warproject.git=https
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ echo $my_git_url=https[K[K[K[K[K[K
+https://topgear-training-gitlab.wipro.com/SERDEEN/warproject.git
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git remote add origin http://topgear-training-gitlab.wipro.com/SERDEEN /$my_git_proj.git
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ git push -u origin master
+Username for 'https://topgear-training-gitlab.wipro.com:443': serdeen
+Password for 'https://serdeen@topgear-training-gitlab.wipro.com:443': 
+Counting objects: 13, done.
+Delta compression using up to 2 threads.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
+Writing objects:   7% (1/13)   Writing objects:  15% (2/13)   Writing objects:  23% (3/13)   Writing objects:  30% (4/13)   Writing objects:  38% (5/13)   Writing objects:  46% (6/13)   Writing objects:  53% (7/13)   Writing objects:  61% (8/13)   Writing objects:  69% (9/13)   Writing objects:  76% (10/13)   Writing objects:  84% (11/13)   Writing objects:  92% (12/13)   Writing objects: 100% (13/13)   Writing objects: 100% (13/13), 2.42 KiB | 0 bytes/s, done.
+Total 13 (delta 0), reused 0 (delta 0)
+To http://topgear-training-gitlab.wipro.com/SERDEEN/warproject.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ wget http://localhost:8080/job/warproject/ws/target/Demo2.war
+--2018-08-21 20:35:15--  http://localhost:8080/job/warproject/ws/target/Demo2.war
+Resolving localhost (localhost)... ::1, 127.0.0.1
+Connecting to localhost (localhost)|::1|:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2079 (2.0K) [application/octet-stream]
+Saving to: ‘Demo2.war’
+
+Demo2.war                     0%[                                         ]       0  --.-KB/s               Demo2.war                   100%[========================================>]   2.03K  --.-KB/s    in 0s      
+
+2018-08-21 20:35:15 (31.9 MB/s) - ‘Demo2.war’ saved [2079/2079]
+
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls -lrt
+total 16
+-rw-r--r-- 1 osgdev docker  700 Aug 21 18:55 pom.xml
+drwxr-xr-x 3 osgdev docker 4096 Aug 21 18:55 [0m[01;34msrc[0m
+drwxr-xr-x 5 osgdev docker 4096 Aug 21 19:00 [01;34mtarget[0m
+-rw-r--r-- 1 osgdev docker 2079 Aug 21 20:33 [01;31mDemo2.war[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ date
+Tue Aug 21 20:35:34 IST 2018
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls /var/lib/jenkins/workspace/
+[0m[01;34mILP-Maruthi[0m  [01;34mjarproject[0m  [01;34mjarproject@tmp[0m  [01;34mwarproject[0m  [01;34mwarproject@tmp[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #ansible-demo asdf Build_Job_Bookstore GitShell jarproject warproject  [A
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls /var/lib/jenkins/workspace/warproject/
+pom.xml  [0m[01;34msrc[0m  [01;34mtarget[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #pom.xml src target 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ ls /var/lib/jenkins/workspace/warproject/target/ 
+[0m[01;34mDemo2[0m  [01;31mDemo2.war[0m  [01;34mmaven-archiver[0m
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ #Demo2 Demo2.war maven-archiver
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/mvnlab/Demo2[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/mvnlab/Demo2[00m$ exit
+exit
+
+Script done on Tuesday 21 August 2018 08:36:27 PM IST

@@ -1,0 +1,1343 @@
+Script started on Tuesday 21 August 2018 02:03:05 AM IST
+
+#1. Check for availability of Git: 
+git --version
+#git version 2.7.4
+#2. Create a folder to work with GIT Local Repository. Normally the folder where the code is generated and required to be version controlled is made as GIT local repository. 
+cd
+mkdir gitlab 
+cd gitlab 
+ls -a
+#. ..
+git init
+#Initialized empty Git repository in /home/osgdev/gitlab/.git/ 
+ls -a
+#. .. .git
+]0;osgdev@TG-DevOps-OS087: ~/Worklog/Worklog[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/Worklog/Worklog[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/Worklog/Worklog[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/Worklog/Worklog[00m$ #1. Check for availability of Git: 
+]0;osgdev@TG-DevOps-OS087: ~/Worklog/Worklog[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/Worklog/Worklog[00m$ git --version
+git version 2.7.4
+]0;osgdev@TG-DevOps-OS087: ~/Worklog/Worklog[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/Worklog/Worklog[00m$ #git version 2.7.4
+]0;osgdev@TG-DevOps-OS087: ~/Worklog/Worklog[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/Worklog/Worklog[00m$ #2. Create a folder to work with GIT Local Repository. Normally th e folder where the code is generated and required to be version controlled is made as GIT local repository.  [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K 
+]0;osgdev@TG-DevOps-OS087: ~/Worklog/Worklog[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/Worklog/Worklog[00m$ cd
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ mkdir gitlab 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ cd gitlab 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #. ..
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git init
+Initialized empty Git repository in /home/osgdev/gitlab/.git/
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Initialized empty Git repository in /home/osgdev/gitlab/.git/ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #. .. .git
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #3. Let us generate some code:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ echo \
+> "class Welcome{
+> public static void main(String[] args){
+> System.out.println( \"Welcome to DevOps Certification Program\");
+> }
+> }" \ 
+class Welcome{
+public static void main(String[] args){
+System.out.println( "Welcome to DevOps Certification Program");
+}
+}  
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ > Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ls -la
+total 12
+drwxr-xr-x  3 osgdev docker 4096 Aug 21 02:03 [0m[01;34m.[0m
+drwxr-xr-x 53 osgdev docker 4096 Aug 21 02:03 [01;34m..[0m
+drwxr-xr-x  7 osgdev docker 4096 Aug 21 02:03 [01;34m.git[0m
+-rw-r--r--  1 osgdev docker    0 Aug 21 02:03 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ car Welcome.java [K[K[K[K^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java [11Pls -la> Welcome.javaecho "class Welcome{
+public static void main(String[] args){
+System.out.println( \"Welcome to DevOps Certification Program\");
+}
+}" \ [K
+> ^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ echo \
+> "class Welcome{
+> public static void main(String[] args){
+> System.out.println( \"Welcome to DevOps Certification Program\");
+> }
+> }" > Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println( "Welcome to DevOps Certification Program");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println( "Welcome to DevOps Certification Program");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ clar
+clarNo command 'clar' found, did you mean:
+ Command 'clear' from package 'ncurses-bin' (main)
+ Command 'car' from package 'ucommon-utils' (universe)
+clar: command not found
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ clar[K[K[Klear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ls -a
+[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m  Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #. .. .git Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #4. Status here is showing that the code Welcome.java need to be staged bef ore commit.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mWelcome.java[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #5. Staging would make git local repo to consider file for version control. [A
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git add Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	[32mnew file:   Welcome.java[m
+
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #On branch master
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Initial commit
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Changes to be committed:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #(use "git rm --cached <file>..." to unstage)
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #new file: Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status -s
+[32mA[m  Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #A Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #6. Commit the staged contents in local repository:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit -m "initial commit"
+[master (root-commit) 5add288] initial commit
+ Committer: osgdev <osgdev@TG-DevOps-OS087.wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+)
+ create mode 100644 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #7. Commit happened but often we missout mentioning who made the commit. He re the log is showing general user “osgdev”.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git log
+[?1h=[33mcommit 5add288609981071aa95eac7aba4ae915e353b5c[m[m
+Author: osgdev <osgdev@TG-DevOps-OS087.wipro.com>[m
+Date:   Tue Aug 21 02:05:45 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #commit f7b9f4bdb9734dd1e544bbe96d5f8a78dbe6d858
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Author: osgdev <osgdev@TG-DevOps-OS083.wipro.com>
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #...
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #8. Change user details for commit and redo the commit to amend the user de tails.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git config --global user.name $my_wipro_id 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git config --global user.email $my_wipro_email
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Note: When you execute the following command, if a file opens in "nano" ed itor 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #press ctrl+x to exit from the file and use "Y" (yes) to save the commit ch anges, 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #and accept the file (path shown) in which it will be saved.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit --amend --reset-author
+[?1049h[1;24r(B[m[4l[?7h[?1h=[?1h=[?1h=[39;49m[?25l[39;49m(B[m[H[2J[22;47H(B[0;7m[ Reading File ][3d(B[m[22;46H(B[0;7m[ Read 11 lines[14d(B[m[?12l[?25h[H[39;49m(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[23d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[2;21r[2;1HM[1;24r[1;99H(B[0;7mModified[4d(B[m[?25l[22;44H(B[0;7m[ Nothing to re-do! ][4d(B[m[?12l[?25h[?25l[22;44H (B[0;7m[ Unknown Command ](B[m[K[4d[?12l[?25hqinitial commitq[2;21r[2;1HM[1;24r[4;1Hq[5d[1Pxinitial commitx[1P[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                        Modified  [4;1H(B[mq[5dinitial commit[7d# Please enter the commit message for your changes. Lines starting[8d# with '#' will be ignored, and an empty message aborts the commit.[9d# On branch master[10d#[11d# Initial commit[12d#[13d# Changes to be committed:[14d#[9Gnew file:   Welcome.java[15d#[22;45H(B[0;7m[ Unknown Command ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[5d[?25l[22d[K[23d[K[24;43H[1K (B[0;7m[ Help mode disabled ](B[m[K[5d[?12l[?25h[24d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                               [?7l [?7h[24;62H(B[m[J[108G[24;1H[?1049l[?1l>[master 80b90f9] initial commit
+ 1 file changed, 5 insertions(+)
+ create mode 100644 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ o[K
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #5. Staging would make git local repo to consider file for version control. [A
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git add Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status -s
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #6. Commit the staged contents in local repository:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit -m "initial commit"
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #7. Commit happened but often we missout mentioning who made the commit. He re the log is showing general user “osgdev”.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git log
+[?1h=[33mcommit 80b90f9ca59d8202ca662b41ed7ce480712d21f4[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:05:45 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #8. Change user details for commit and redo the commit to amend the user de tails.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git config --global user.name $my_wipro_id 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git config --global user.email $my_wipro_email
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit --amend --reset-author
+[?1049h[1;24r(B[m[4l[?7h[?1h=[?1h=[?1h=[39;49m[?25l[39;49m(B[m[H[2J[22;47H(B[0;7m[ Reading File ][3d(B[m[22;46H(B[0;7m[ Read 11 lines[14d(B[m[?12l[?25h[H[39;49m(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[23d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[22;46H(B[0;7m[ Read 11 lines ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?25l[22d[K[23d[K[24;43H[1K (B[0;7m[ Help mode disabled ](B[m[K[3d[?12l[?25h[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[24;44H(B[0;7m[ Help mode disabled ][3d(B[m[?25l[22;44H(B[0;7m[ Help mode enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?12l[?25h[1;99H(B[0;7mModified[3d(B[mxinitial commitx[1P[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                        Modified  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[22;44H(B[0;7m[ Help mode enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?25l[22d[K[23d[K[24;43H[1K (B[0;7m[ Help mode disabled ](B[m[K[3d[?12l[?25h[24d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                               [?7l [?7h[24;62H(B[m(B[0;7mFile Name to Write: /home/osgdev/gitlab/.git/COMMIT_EDITMSG (B[m(B[0;7me(B[m(B[0;7ms(B[m(B[0;7mSave file under DIFFERENT NAME ?                             [24;34H(B[m(B[0;7mFile Name to Write: /home/osgdev/gitlab/.git/COMMIT_EDITMSGes(B[m[?25l[24;47H[1K (B[0;7m[ Cancelled ](B[m[K[3d[?12l[?25h[24d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                               [?7l [?7h[24;62H(B[m(B[0;7mFile Name to Write: /home/osgdev/gitlab/.git/COMMIT_EDITMSG (B[m[?25l[24;45H[39;49m(B[m[1K (B[0;7m[ Wrote 11 lines ](B[m[K[3d[24d[J[1;99H(B[0;7m        [24;108H(B[m[24;1H[?12l[?25h[?1049l[?1l>[master a3eb9a7] initial commit
+ 1 file changed, 5 insertions(+)
+ create mode 100644 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit --amend --reset-author
+[?1049h[1;24r(B[m[4l[?7h[?1h=[?1h=[?1h=[39;49m[?25l[39;49m(B[m[H[2J[22;47H(B[0;7m[ Reading File ][3d(B[m[22;46H(B[0;7m[ Read 11 lines[14d(B[m[?12l[?25h[H[39;49m(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[23d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[22;46H(B[0;7m[ Read 11 lines ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?25l[2;21r[21;1H
+[1;24r[22;33H(B[0;7m[ Use of one more line for editing enabled ][2d(B[m[?12l[?25h[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [2;1H(B[minitial commit[4d# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d# On branch master[7d#[8d# Initial commit[9d#[10d# Changes to be committed:[11d#[9Gnew file:   Welcome.java[12d#[22;33H(B[0;7m[ Use of one more line for editing enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[2d[?25l7[2;21r8M[1;24r[22;32H(B[0;7m[ Use of one more line for editing dis[3d(B[m[?12l[?25h[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[22;32H(B[0;7m[ Use of one more line for editing disabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?25l[22d[K[23d[K[24;43H[1K (B[0;7m[ Help mode disabled ](B[m[K[3d[?12l[?25h[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[24;44H(B[0;7m[ Help mode disabled ][3d(B[m[?25l[22;44H(B[0;7m[ Help mode enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?12l[?25h[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[22;44H(B[0;7m[ Help mode enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?25l[22d[K[23d[K[24;43H[1K (B[0;7m[ Help mode disabled ](B[m[K[3d[?12l[?25h[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                                  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[24;44H(B[0;7m[ Help mode disabled ][3d(B[m[?25l[22;44H(B[0;7m[ Help mode enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?12l[?25h[1;99H(B[0;7mModified[3d(B[mxinitial commitx[1P[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                        Modified  [3;1H(B[minitial commit[5d# Please enter the commit message for your changes. Lines starting[6d# with '#' will be ignored, and an empty message aborts the commit.[7d# On branch master[8d#[9d# Initial commit[10d#[11d# Changes to be committed:[12d#[9Gnew file:   Welcome.java[13d#[22;44H(B[0;7m[ Help mode enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[?25l[2;21r[21;1H
+[1;24r[22;33H(B[0;7m[ Use of one more line for editing enabled ][2d(B[m[?12l[?25h[?1h=[?1h=[?1h=[H[2J(B[0;7m  GNU nano 2.5.3             File: /home/osgdev/gitlab/.git/COMMIT_EDITMSG                        Modified  [2;1H(B[minitial commit[4d# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d# On branch master[7d#[8d# Initial commit[9d#[10d# Changes to be committed:[11d#[9Gnew file:   Welcome.java[12d#[22;33H(B[0;7m[ Use of one more line for editing enabled ][23d^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[2d[?25l[22d[K[23d[K[24;43H[1K (B[0;7m[ Help mode disabled ](B[m[K[2d[?12l[?25h[24d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                                               [?7l [?7h[24;62H(B[m(B[0;7mFile Name to Write: /home/osgdev/gitlab/.git/COMMIT_EDITMSG (B[m[?25l[24;45H[39;49m(B[m[1K (B[0;7m[ Wrote 11 lines ](B[m[K[2d[24d[J[1;99H(B[0;7m        [24;108H(B[m[24;1H[?12l[?25h[?1049l[?1l>[master 54bfc25] initial commit
+ 1 file changed, 5 insertions(+)
+ create mode 100644 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #9. Make a small change by adding another line to code:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ echo \ 
+ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ "class Welcome{
+> public static void main(String[] args){
+> System.out.println(\"Welcome to DevOps Certification Program\");
+> System.out.println(\"### Initial Code Modified ###\");
+> }
+> } " \ > Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} : command not found
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #10. Status show that the code is modified post the commit:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Welcome.java[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #11. You can stage and commit together with the help of -a flag used in git  commit:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit -a -m "Modified Code-1"
+[master c0c3a8c] Modified Code-1
+ 1 file changed, 5 deletions(-)
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #[master a552ff6] Modified Code-1
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #1 file changed, 1 insertion(+)
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #On branch master
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git log
+[?1h=[33mcommit c0c3a8c070539d01c39212162da152f304c4079e[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:10:41 2018 +0530[m
+[m
+    Modified Code-1[m
+[m
+[33mcommit 54bfc259ae98b12fc1b4f2950325a2b3d288887d[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:08:56 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #12. Checking your code at different version.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Check your code at present:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git checkout ^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #9. Make a small change by adding another line to code:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ echo \ 
+ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ "class Welcome{
+> public static void main(String[] args){
+> System.out.println(\"Welcome to DevOps Certification Program\");
+> System.out.println(\"### Initial Code Modified ###\");
+> }
+> } " > Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} : command not found
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #10. Status show that the code is modified post the commit:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #11. You can stage and commit together with the help of -a flag used in git  commit:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit -a -m "Modified Code-2"
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #On branch master
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git log
+[?1h=[33mcommit c0c3a8c070539d01c39212162da152f304c4079e[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:10:41 2018 +0530[m
+[m
+    Modified Code-1[m
+[m
+[33mcommit 54bfc259ae98b12fc1b4f2950325a2b3d288887d[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:08:56 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #12. Checking your code at different version.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Check your code at present:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat
+^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ls -lrt
+total 0
+-rw-r--r-- 1 osgdev docker 0 Aug 21 02:13 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ pwd
+/home/osgdev/gitlab
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ls la[K[K-la
+total 12
+drwxr-xr-x  3 osgdev docker 4096 Aug 21 02:03 [0m[01;34m.[0m
+drwxr-xr-x 53 osgdev docker 4096 Aug 21 02:07 [01;34m..[0m
+drwxr-xr-x  8 osgdev docker 4096 Aug 21 02:13 [01;34m.git[0m
+-rw-r--r--  1 osgdev docker    0 Aug 21 02:13 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java [11Pls -la[3Ppwdls -lrt[4Pcat Welcome.java#Check your code at present:12. Checking your code at different version.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit log[K#nothing to commit, working directory clean[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26POn branch master[7Pgit statuscommit -a -m "Modified Code-2"#11. You can stage and commit together with the help of -a flag used in git  commit:[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C#11. You can stage and commit together with the help of -a flag used in git  commit:[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C#10. Status show that the code is modified post the commit:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat Welcome.java[K[1P"class Welcome{
+public static void main(String[] args){
+System.out.println(\"Welcome to DevOps Certification Program\");
+System.out.println(\"### Initial Code Modified ###\");
+}
+} " > Welcome.java[A[A[A[A[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ [8Pecho \ 
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C#9. Make a small change by adding another line to code:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclear[K#9. Make a small change by adding another line to code:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho \ [K"class Welcome{
+public static void main(String[] args){
+System.out.println(\"Welcome to DevOps Certification Program\");
+System.out.println(\"### Initial Code Modified ###\");
+}
+} " > Welcome.java[A[A[A[A[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C#10. Status show that the code is modified post the commit:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit status[K#11. You can stage and commit together with the help of -a flag used in git  commit:[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ [41Pgit commit -a -m "Modified Code-2"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K#On branch masternothing to commit, working directory clean[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit log[K#12. Checking your code at different version.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17PCheck your code at present:[12Pcat Welcome.java[Kls -lrt[4Ppwdls -lacat Welcome.java [Kcat Welcome.java [11Pls -la[3Ppwdls -lrt[4Pcat Welcome.java#Check your code at present:12. Checking your code at different version.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit log[K#nothing to commit, working directory clean[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26POn branch master[7Pgit statuscommit -a -m "Modified Code-2"#11. You can stage and commit together with the help of -a flag used in git  commit:[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C#10. Status show that the code is modified post the commit:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat Welcome.java[K[1P"class Welcome{
+public static void main(String[] args){
+System.out.println(\"Welcome to DevOps Certification Program\");
+System.out.println(\"### Initial Code Modified ###\");
+}
+} " > Welcome.java[A[A[A[A[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ [8Pecho \ 
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C#9. Make a small change by adding another line to code:[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho \ [K"class Welcome{
+public static void main(String[] args){
+System.out.println(\"Welcome to DevOps Certification Program\");
+System.out.println(\"### Initial Code Modified ###\");
+}
+} " > Welcome.java^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ echo \
+> "class Welcome{
+> public static void main(String[] args){
+> System.out.println(\"Welcome to DevOps Certification Program\");
+> System.out.println(\"### Initial Code Modified ###\");
+> }
+> } " > Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Welcome.java[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #11. You can stage and commit together with the help of -a flag used in git  commit:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git commit -a -m "Modified Code-2"
+[master a3a83d2] Modified Code-2
+ 1 file changed, 6 insertions(+)
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status
+On branch master
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #On branch master
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git log
+[?1h=[33mcommit a3a83d2e16e4f82b716d47a8fb252c19b560aa33[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:16:15 2018 +0530[m
+[m
+    Modified Code-2[m
+[m
+[33mcommit c0c3a8c070539d01c39212162da152f304c4079e[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:10:41 2018 +0530[m
+[m
+    Modified Code-1[m
+[m
+[33mcommit 54bfc259ae98b12fc1b4f2950325a2b3d288887d[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:08:56 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #12. Checking your code at different version.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ #Check your code at present:
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java#Check your code at present:12. Checking your code at different version.[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit log[K#nothing to commit, working directory clean[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[26POn branch master[7Pgit statuscommit -a -m "Modified Code-2"#11. You can stage and commit together with the help of -a flag used in git  commit:[A]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ [41Pgit commit -a -m "Modified Code-2"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git[K[K[Kcat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git checkout a3a83d2e16e4f82b716d47a8fb252c19b560aa33
+Note: checking out 'a3a83d2e16e4f82b716d47a8fb252c19b560aa33'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a3a83d2... Modified Code-2
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git log
+[?1h=[33mcommit a3a83d2e16e4f82b716d47a8fb252c19b560aa33[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:16:15 2018 +0530[m
+[m
+    Modified Code-2[m
+[m
+[33mcommit c0c3a8c070539d01c39212162da152f304c4079e[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:10:41 2018 +0530[m
+[m
+    Modified Code-1[m
+[m
+[33mcommit 54bfc259ae98b12fc1b4f2950325a2b3d288887d[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:08:56 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git logcat Welcome.java git checkout a3a83d2e16e4f82b716d47a8fb252c19b560aa33[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kheckout 54bfc259ae98b12fc1b4f2950325a2b3d288887d
+Previous HEAD position was a3a83d2... Modified Code-2
+HEAD is now at 54bfc25... initial commit
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ct[K[Kcat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println( "Welcome to DevOps Certification Program");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git log
+[?1h=[33mcommit 54bfc259ae98b12fc1b4f2950325a2b3d288887d[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:08:56 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git checkout a3a83d2e16e4f82b716d47a8fb252c19b560aa33
+Previous HEAD position was 54bfc25... initial commit
+HEAD is now at a3a83d2... Modified Code-2
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ ls -lrt
+total 4
+-rw-r--r-- 1 osgdev docker 176 Aug 21 02:18 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status s[K-s
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git status -s[K[K[K
+[31mHEAD detached at [ma3a83d2
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git remote add origin https://topgear-training-gitlab.wipro.com/SERDEEN/bat ch6SMM.git
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ git push -u origin master
+Username for 'https://topgear-training-gitlab.wipro.com': serdeen
+Password for 'https://serdeen@topgear-training-gitlab.wipro.com': 
+Counting objects: 9, done.
+Delta compression using up to 2 threads.
+Compressing objects:  20% (1/5)   Compressing objects:  40% (2/5)   Compressing objects:  60% (3/5)   Compressing objects:  80% (4/5)   Compressing objects: 100% (5/5)   Compressing objects: 100% (5/5), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 802 bytes | 0 bytes/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+To https://topgear-training-gitlab.wipro.com/SERDEEN/batch6SMM.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ my_log_d=/home/osgdev/Worklog/logs
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ my_wipro_id=serdeen
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ my_wipro_pwd=Escrever0u0u0u0u
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ my_wipro_email=sergio.mendes@wipro.com
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ my_git_proj=batch6SMM
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ my_git_url=https://topgear-training-gitlab.wipro.com/SERDEEN/batch6SMM.git
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ export my_log_d my_wipro_id my_wipro_pwd my_wipro_email my_git_proj my_git_ url
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/gitlab[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/gitlab[00m$ cd
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ git clone $my_git_url
+Cloning into 'batch6SMM'...
+remote: Counting objects: 12, done.[K
+remote: Compressing objects:  14% (1/7)   [Kremote: Compressing objects:  28% (2/7)   [Kremote: Compressing objects:  42% (3/7)   [Kremote: Compressing objects:  57% (4/7)   [Kremote: Compressing objects:  71% (5/7)   [Kremote: Compressing objects:  85% (6/7)   [Kremote: Compressing objects: 100% (7/7)   [Kremote: Compressing objects: 100% (7/7), done.[K
+remote: Total 12 (delta 2), reused 0 (delta 0)[K
+Unpacking objects:   8% (1/12)   Unpacking objects:  16% (2/12)   Unpacking objects:  25% (3/12)   Unpacking objects:  33% (4/12)   Unpacking objects:  41% (5/12)   Unpacking objects:  50% (6/12)   Unpacking objects:  58% (7/12)   Unpacking objects:  66% (8/12)   Unpacking objects:  75% (9/12)   Unpacking objects:  83% (10/12)   Unpacking objects:  91% (11/12)   Unpacking objects: 100% (12/12)   Unpacking objects: 100% (12/12), done.
+Checking connectivity... done.
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ ls -la
+total 352
+drwxr-xr-x 54 osgdev docker  4096 Aug 21 02:28 [0m[01;34m.[0m
+drwxr-xr-x  3 root   root    4096 Nov  8  2017 [01;34m..[0m
+drwxr-xr-x  3 osgdev docker  4096 Mar  7 07:41 [01;34m7March[0m
+drwx------  3 osgdev docker  4096 Jan 21  2018 [01;34m.ansible[0m
+-rw-------  1 osgdev docker     0 May 23 18:59 .ansible_galaxy
+drwxr-xr-x  4 osgdev docker  4096 May 25 18:34 [01;34mansilab[0m
+drwxrwxr-x  6 osgdev docker  4096 Mar  7 06:32 [01;34map[0m
+drwxr-xr-x  3 osgdev docker  4096 Mar  2 19:40 [01;34mapache7[0m
+-rw-r--r--  1 osgdev docker   415 Aug 17 19:00 app.class
+-rw-------  1 osgdev docker 32568 Aug 21 01:59 .bash_history
+-rw-r--r--  1 osgdev docker   220 Nov  8  2017 .bash_logout
+-rw-r--r--  1 osgdev docker  3968 Jul 27 16:23 .bashrc
+drwxr-xr-x  3 osgdev docker  4096 Aug 21 02:28 [01;34mbatch6SMM[0m
+-rw-r--r--  1 osgdev docker   236 Mar  2 17:01 bintray-jfrog-artifactory-pro-rpms.repo
+-rw-r--r--  1 osgdev docker   236 Mar  2 17:02 bintray-jfrog-artifactory-pro-rpms.reposudo
+-rw-r--r--  1 osgdev docker   220 Mar  2 16:18 bintray-jfrog-artifactory-rpms.repo
+drwx------ 22 osgdev docker  4096 May 21 20:19 [01;34m.cache[0m
+drwxr-xr-x  2 osgdev docker  4096 Jul 17 18:50 [01;34mcapstone[0m
+drwx------  3 osgdev docker  4096 Jun 14 21:58 [01;34m.compiz[0m
+drwx------ 18 osgdev docker  4096 Aug 21 01:32 [01;34m.config[0m
+drwx------  3 osgdev docker  4096 Jan 24  2018 [01;34m.dbus[0m
+drwxr-xr-x  3 osgdev docker  4096 Jan 24  2018 [01;34mDesktop[0m
+-rw-r--r--  1 osgdev docker    25 Jan 22  2018 .dmrc
+drwxr-xr-x  2 osgdev docker  4096 Jan 22  2018 [01;34mDocuments[0m
+drwxr-xr-x  2 osgdev docker  4096 May 28 21:16 [01;34mDownloads[0m
+drwxr-xr-x  8 osgdev docker  4096 Jul 17 18:16 [01;34meclipse[0m
+drwxr-xr-x  9 osgdev docker  4096 Mar  7 15:49 [01;34m.eclipse[0m
+drwxr-xr-x  9 osgdev docker  4096 Mar  7 15:49 [01;34meclipse-workspace[0m
+-rwxr--r-x  1 osgdev docker   713 Aug 17 19:01 [01;32mfunctions.sh[0m
+drwx------  2 osgdev docker  4096 Feb  6  2018 [01;34m.gconf[0m
+-rw-r--r--  1 osgdev docker    56 Aug 21 02:07 .gitconfig
+drwxr-xr-x  3 osgdev docker  4096 Aug 21 02:18 [01;34mgitlab[0m
+-rw-r-----  1 osgdev docker     0 Feb  6  2018 .gksu.lock
+drwx------  3 osgdev docker  4096 Aug 21 01:06 [01;34m.gnupg[0m
+-rw-------  1 osgdev docker 15260 Aug 21 01:06 .ICEauthority
+drwxr-xr-x  3 osgdev docker  4096 May 23 10:27 [01;34mILP[0m
+drwxr-xr-x  6 osgdev docker  4096 May 25 22:16 [01;34milp_ansilab_deploy[0m
+drwxr-xr-x  3 osgdev docker  4096 Jan 22  2018 [01;34m.java[0m
+drwxr-xr-x  2 osgdev docker  4096 Jan 22  2018 [01;34mjenkinplugin[0m
+drwxrwxr-x 11 osgdev docker  4096 Jan 22  2018 [01;34m.jenkins[0m
+-rw-------  1 root   root     492 Aug 21 01:41 .lesshst
+drwx------  3 osgdev docker  4096 Jan 22  2018 [01;34m.local[0m
+drwxrwxr-x  3 osgdev docker  4096 Jan 19  2018 [01;34m.m2[0m
+drwxr-xr-x  2 osgdev docker  4096 May 21 17:59 [01;34mMaruthi_ilp[0m
+drwx------  5 osgdev docker  4096 Feb  1  2018 [01;34m.mozilla[0m
+drwxr-xr-x  2 osgdev docker  4096 Jan 22  2018 [01;34mMusic[0m
+drwxr-xr-x  3 osgdev docker  4096 Mar  2 16:41 [01;34mmyArtifactory[0m
+drwxr-xr-x  2 osgdev docker  4096 Mar  2 19:40 [01;34mmyDownloads[0m
+drwxr-xr-x  3 osgdev docker  4096 Feb  6  2018 [01;34mmyEditor[0m
+drwxr-xr-x  3 root   root    4096 Jul 27 03:56 [01;34mmySonar[0m
+drwxr-xr-x  2 osgdev docker  4096 Mar  2 19:34 [01;34mmySonarQube[0m
+-rw-------  1 osgdev docker    65 Mar  2 19:01 .mysql_history
+drwxr-xr-x  3 osgdev docker  4096 Mar  2 19:37 [01;34mmytomcat[0m
+drwxr-xr-x  2 osgdev docker  4096 Feb  6  2018 [01;34m.nano[0m
+drwxrwxr-x  2 osgdev docker  4096 Jan 24  2018 [01;34m.oracle_jre_usage[0m
+drwxr-xr-x  6 osgdev docker  4096 Jul 17 18:19 [01;34m.p2[0m
+drwxr-xr-x  2 osgdev docker  4096 Jan 22  2018 [01;34mPictures[0m
+-rw-r--r--  1 osgdev docker   749 Jul 27 04:10 .profile
+drwxr-xr-x  2 osgdev docker  4096 Jan 22  2018 [01;34mPublic[0m
+drwxr-xr-x  4 osgdev docker  4096 May 29 12:41 [01;34mRelease[0m
+drwxr-xr-x  2 osgdev docker  4096 May 25 18:24 [01;34mresource[0m
+-rw-r--r--  1 osgdev docker    57 Aug  7 18:35 smm
+-rw-r--r--  1 root   root    2951 Mar  2 16:08 sources.list
+-rw-r--r--  1 osgdev docker     0 Nov  8  2017 .sudo_as_admin_successful
+drwxr-xr-x  3 osgdev docker  4096 Feb  5  2018 [01;34m.swt[0m
+drwxr-xr-x  2 osgdev docker  4096 Jan 22  2018 [01;34mTemplates[0m
+drwxr-xr-x  3 osgdev docker  4096 Jan 24  2018 [01;34m.tooling[0m
+drwxr-xr-x  4 osgdev docker  4096 Mar  5 10:05 [01;34mTRIAL[0m
+drwxr-xr-x  0 root   root       0 Jan  1  1970 [01;34mtsclient[0m
+drwxr-xr-x  2 osgdev docker  4096 Jan 22  2018 [01;34mVideos[0m
+-rw-r--r--  1 osgdev docker  7687 Aug 21 01:59 .viminfo
+drwx------  2 osgdev docker  4096 Feb  1  2018 [01;34m.vnc[0m
+-rw-r--r--  1 osgdev docker    92 Aug 17 18:59 welcome.java
+-rw-r--r--  1 osgdev docker   211 Jul 27 16:49 .wget-hsts
+-rw-r--r--  1 osgdev docker    90 Jan 21  2018 wgetrc.bak
+drwxr-xr-x  5 osgdev docker  4096 Aug 21 02:03 [01;34mWorklog[0m
+drwxr-xr-x  3 osgdev docker  4096 Feb  5  2018 [01;34mworkspace[0m
+-rw-------  1 osgdev docker   355 Aug 21 01:06 .Xauthority
+-rw-r--r--  1 osgdev docker    14 Feb  1  2018 .xsession
+-rw-------  1 osgdev docker     0 Aug 21 01:06 .xsession-errors
+-rw-------  1 osgdev docker  1272 Aug 21 01:05 .xsession-errors.old
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~[00m$ cd $my_git_proj
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### Git Modified ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status -s
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status -s
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ vi Welcome.java 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"Welcome.java" 7L, 220C[>c[27m[23m[m[H[2J[1;1H[32mclass[m Welcome{
+[32mpublic[m [32mstatic[m [32mvoid[m main(String[] args){
+System.out.println([31m"Welcome to DevOps Certification Program"[m);
+System.out.println([31m"### Initial Code Modified ###"[m);
+System.out.println([31m"### Git Modified ###"[m);
+}
+}
+[94m~                                                                                                           [9;1H~                                                                                                           [10;1H~                                                                                                           [11;1H~                                                                                                           [12;1H~                                                                                                           [13;1H~                                                                                                           [14;1H~                                                                                                           [15;1H~                                                                                                           [16;1H~                                                                                                           [17;1H~                                                                                                           [18;1H~                                                                                                           [19;1H~                                                                                                           [20;1H~                                                                                                           [21;1H~                                                                                                           [22;1H~                                                                                                           [23;1H~                                                                                                           [m[24;91H1,1[11CAll"Welcome.java" 7L, 220C[67C   [11C   [1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;91H2,1[11CAll[2;1H[?12l[?25h[?25l[24;91H3[3;1H[?12l[?25h[?25l[24;91H4[4;1H[?12l[?25h[?25l[24;91H5[5;1H[?12l[?25h[?25l[6;23r[6;1H[L[1;24r[6;1HSystem.out.println([31m"### Git Modified ###"[m);[24;1H[K[24;91H6,1[11CAll[6;1H[?12l[?25h[?25l[24;93H2[6;2H[?12l[?25h[?25l[24;93H3[6;3H[?12l[?25h[?25l[24;93H4[6;4H[?12l[?25h[?25l[24;93H5[6;5H[?12l[?25h[?25l[24;93H6[6;6H[?12l[?25h[?25l[24;93H7[6;7H[?12l[?25h[?25l[24;93H8[6;8H[?12l[?25h[?25l[24;93H9[6;9H[?12l[?25h[?25l[24;93H10[6;10H[?12l[?25h[?25l[24;94H1[6;11H[?12l[?25h[?25l[24;94H2[6;12H[?12l[?25h[?25l[24;94H3[6;13H[?12l[?25h[?25l[24;94H4[6;14H[?12l[?25h[?25l[24;94H5[6;15H[?12l[?25h[?25l[24;94H6[6;16H[?12l[?25h[?25l[24;94H7[6;17H[?12l[?25h[?25l[24;94H8[6;18H[?12l[?25h[?25ln[106m([22C)[m[24;94H9[6;19H[?12l[?25h[?25l([22C)[24;93H20[6;20H[?12l[?25h[?25l[24;94H1[6;21H[?12l[?25h[?25l[24;94H2[6;22H[?12l[?25h[?25l[24;94H3[6;23H[?12l[?25h[?25l[24;94H4[6;24H[?12l[?25h[?25l[24;94H5[6;25H[?12l[?25h[?25l[24;94H6[6;26H[?12l[?25h[?25l[24;94H7[6;27H[?12l[?25h[?25l[24;94H8[6;28H[?12l[?25h[?25l[24;94H9[6;29H[?12l[?25h[?25l[24;93H30[6;30H[?12l[?25h[?25l[24;93H29[6;29H[?12l[?25h[?25l[24;94H8[6;28H[?12l[?25h[?25l[24;94H7[6;27H[?12l[?25h[?25l[24;94H6[6;26H[?12l[?25h[?25l[24;94H5[6;25H[?12l[?25h[?25l[31mModified ###"[m);[6;40H[K[6;25H[?12l[?25h[?25l[31m###"[m);[6;31H[K[6;25H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;91H[K[24;91H6,25[10CAll[6;25H[?12l[?25h[?25l[31mm###"[m);[24;94H6[6;26H[?12l[?25h[?25l[31m###"[m);[6;31H[K[24;94H5[6;25H[?12l[?25h[?25l[31mM###"[m);[24;94H6[6;26H[?12l[?25h[?25l[31mo###"[m);[24;94H7[6;27H[?12l[?25h[?25l[31md###"[m);[24;94H8[6;28H[?12l[?25h[?25l[31mi###"[m);[24;94H9[6;29H[?12l[?25h[?25l[31mf###"[m);[24;93H30[6;30H[?12l[?25h[?25l[31mi###"[m);[24;94H1[6;31H[?12l[?25h[?25l[31me###"[m);[24;94H2[6;32H[?12l[?25h[?25l[31md###"[m);[24;94H3[6;33H[?12l[?25h[?25l[31m ###"[m);[24;94H4[6;34H[?12l[?25h[?25l[31ma###"[m);[24;94H5[6;35H[?12l[?25h[?25l[31mf###"[m);[24;94H6[6;36H[?12l[?25h[?25l[31mt###"[m);[24;94H7[6;37H[?12l[?25h[?25l[31me###"[m);[24;94H8[6;38H[?12l[?25h[?25l[31mr###"[m);[24;94H9[6;39H[?12l[?25h[?25l[31m ###"[m);[24;93H40[6;40H[?12l[?25h[?25l[31mc###"[m);[24;94H1[6;41H[?12l[?25h[?25l[31ml###"[m);[24;94H2[6;42H[?12l[?25h[?25l[31mo###"[m);[24;94H3[6;43H[?12l[?25h[?25l[31mn###"[m);[24;94H4[6;44H[?12l[?25h[?25l[31me###"[m);[24;94H5[6;45H[?12l[?25h[?25l[31m ###"[m);[24;94H6[6;46H[?12l[?25h[24;1H[K[6;45H[?25l[24;91H6,45[10CAll[6;45H[?12l[?25h[?25l[24;91H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"Welcome.java" 8L, 272C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### Git Modified ###");
+System.out.println("### Modified after clone ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status -s
+ [31mM[m Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ f[Kgit commit -a^C
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit -a -m "Cloned and Modified"
+[master 987bc5e] Cloned and Modified
+ 1 file changed, 1 insertion(+)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit -a -m "Cloned and Modified"status -s[K
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #25. Pretty printing the git log:
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=987bc5e 2018-08-21 | Cloned and Modified (HEAD -> master) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #26. Tagging Important Version:
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git tag v1.0 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=987bc5e 2018-08-21 | Cloned and Modified (HEAD -> master, tag: v1.0) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ gi[K[Kcat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### Git Modified ###");
+System.out.println("### Modified after clone ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git checkout 54bfc25
+Note: checking out '54bfc25'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 54bfc25... initial commit
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println( "Welcome to DevOps Certification Program");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log
+[?1h=[33mcommit 54bfc259ae98b12fc1b4f2950325a2b3d288887d[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:08:56 2018 +0530[m
+[m
+    initial commit[m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git checkout v.[K1.0
+Previous HEAD position was 54bfc25... initial commit
+HEAD is now at 987bc5e... Cloned and Modified
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### Git Modified ###");
+System.out.println("### Modified after clone ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ echo \
+> "class Welcome{
+> public static void main(String[] args){
+> System.out.println(\"Welcome to DevOps Certification Program\");
+> System.out.println(\"### Initial Code Modified ###\");
+> System.out.println(\"### This code is entered at GitLab ###\");
+> System.out.println(\"### This code is modified after clone ###\");
+> System.out.println(\"### Making Additional Changes ###\");
+> }
+> }" > Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status
+[31mHEAD detached at [mv1.0
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Welcome.java[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java 
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### This code is entered at GitLab ###");
+System.out.println("### This code is modified after clone ###");
+System.out.println("### Making Additional Changes ###");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git add Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status
+[31mHEAD detached at [mv1.0
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   Welcome.java[m
+
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #On branch master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Your branch is up-to-date with 'origin/master'.
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #...
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git reset HEAD Welcome.java
+Unstaged changes after reset:
+M	Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Unstaged changes after reset:
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #...
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status
+[31mHEAD detached at [mv1.0
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Welcome.java[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status
+[31mHEAD detached at [mv1.0
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Welcome.java[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### This code is entered at GitLab ###");
+System.out.println("### This code is modified after clone ###");
+System.out.println("### Making Additional Changes ###");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git add Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status
+[31mHEAD detached at [mv1.0
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   Welcome.java[m
+
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit -m "another modification"
+[detached HEAD eb6a292] another modification
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #[master 2987cc1] another modification
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #1 file changed, 1 insertion(+)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short
+fatal: ambiguous argument '%ad': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+%s%d: command not found
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29P#1 file changed, 1 insertion(+)git log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short^C
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ [14P(reverse-i-search)`':[C-': git log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@p[C[C[C[C[C[C[C[C[C[C[C[1@r[C[C[C[C[C[C[C[C[C[C[C[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P"%h %ad | %s%d [%an][C[7@failed [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=eb6a292 2018-08-21 | another modification (HEAD) [serdeen][m
+987bc5e 2018-08-21 | Cloned and Modified (tag: v1.0, master) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short[2@\"%h %ad | %s%d [%an]\[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+fatal: ambiguous argument '%ad': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+%s%d: command not found
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short[C[C[C[C[1P
+> ^C
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]\" --date=short[C[1P
+[?1h=eb6a292 2018-08-21 | another modification (HEAD) [serdeen][m
+987bc5e 2018-08-21 | Cloned and Modified (tag: v1.0, master) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=eb6a292 2018-08-21 | another modification (HEAD) [serdeen][m
+987bc5e 2018-08-21 | Cloned and Modified (tag: v1.0, master) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git revert HEAD
+[?1049h[1;24r(B[m[4l[?7h[?1h=[?1h=[?1h=[39;49m[?25l[39;49m(B[m[H[2J[22;47H(B[0;7m[ Reading File ][3d(B[m[22;46H(B[0;7m[ Read 10 lines[13d(B[m[?12l[?25h[H[39;49m(B[0;7m  GNU nano 2.5.3            File: /home/osgdev/batch6SMM/.git/COMMIT_EDITMSG                                [3;1H(B[mRevert "another modification"[5dThis reverts commit eb6a29246d1d3e2951ed628862ad1ed312372b98.[7d# Please enter the commit message for your changes. Lines starting[8d# with '#' will be ignored, and an empty message aborts the commit.[9d# HEAD detached from v1.0[10d# Changes to be committed:[11d#[9Gmodified:   Welcome.java[12d#[23d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[22d(B[0;7mFile Name to Write: /home/osgdev/batch6SMM/.git/COMMIT_EDITMSG                                              [23;16H(B[m      (B[0;7mM-D(B[m DOS Format       (B[0;7mM-A(B[m Append           (B[0;7mM-B(B[m Backup File[K[24;2H(B[0;7mC(B[m Cancel[16G      (B[0;7mM-M(B[m Mac Format       (B[0;7mM-P(B[m Prepend          (B[0;7m^T(B[m To Files[K[22;63H[?25l[22;45H[39;49m(B[m[1K (B[0;7m[ Wrote 10 lines ](B[m[K[3d[?12l[?25h[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[3;30H[22d[J[24;108H[24;1H[?1049l[?1l>[detached HEAD 7f95ff8] Revert "another modification"
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git revert HEAD
+[?1049h[1;24r(B[m[4l[?7h[?1h=[?1h=[?1h=[39;49m[?25l[39;49m(B[m[H[2J[22;47H(B[0;7m[ Reading File ][3d(B[m[22;46H(B[0;7m[ Read 10 lines[13d(B[m[?12l[?25h[H[39;49m(B[0;7m  GNU nano 2.5.3            File: /home/osgdev/batch6SMM/.git/COMMIT_EDITMSG                                [3;1H(B[mRevert "Revert "another modification""[5dThis reverts commit 7f95ff8b28657e74f1a28721e42f3f5496e7224c.[7d# Please enter the commit message for your changes. Lines starting[8d# with '#' will be ignored, and an empty message aborts the commit.[9d# HEAD detached from v1.0[10d# Changes to be committed:[11d#[9Gmodified:   Welcome.java[12d#[23d(B[0;7m^G(B[m Get Help    (B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24d(B[0;7m^X(B[m Exit[24;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[22d(B[0;7mFile Name to Write: /home/osgdev/batch6SMM/.git/COMMIT_EDITMSG                                              [23;16H(B[m      (B[0;7mM-D(B[m DOS Format       (B[0;7mM-A(B[m Append           (B[0;7mM-B(B[m Backup File[K[24;2H(B[0;7mC(B[m Cancel[16G      (B[0;7mM-M(B[m Mac Format       (B[0;7mM-P(B[m Prepend          (B[0;7m^T(B[m To Files[K[22;63H[?25l[22;45H[39;49m(B[m[1K (B[0;7m[ Wrote 10 lines ](B[m[K[3d[?12l[?25h[23;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut Text    (B[0;7m^J(B[m Justify     (B[0;7m^C(B[m Cur Pos     (B[0;7m^Y(B[m Prev Page[24;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Uncut Text  (B[0;7m^T(B[m To Spell    (B[0;7m^_(B[m Go To Line  (B[0;7m^V(B[m Next Page[3d[22d[J[24;108H[24;1H[?1049l[?1l>[detached HEAD 467f5b0] Revert "Revert "another modification""
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### This code is entered at GitLab ###");
+System.out.println("### This code is modified after clone ###");
+System.out.println("### Making Additional Changes ###");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git reset --hard v1.0
+HEAD is now at 987bc5e Cloned and Modified
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=987bc5e 2018-08-21 | Cloned and Modified (HEAD, tag: v1.0, master) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=987bc5e 2018-08-21 | Cloned and Modified (HEAD, tag: v1.0, master) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+* [32m(HEAD detached at v1.0)[m
+  master[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch newfeature 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+* [32m(HEAD detached at v1.0)[m
+  master[m
+  newfeature[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git checkout newfeature
+Switched to branch 'newfeature'
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Switched to branch 'newfeature' 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+  master[m
+* [32mnewfeature[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #* newfeature 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Switched to branch 'master'
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Your branch is up-to-date with 'origin/master'.
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+* [32mmaster[m
+  newfeature[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #* master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #newfeature
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #31. Switch to branch "newfeature" and make change to code:
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git checkout newfeature
+Switched to branch 'newfeature'
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Switched to branch 'newfeature'
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+  master[m
+* [32mnewfeature[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #* newfeature 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ echo \
+> "class Welcome{
+> public static void main(String[] args){
+> System.out.println(\"Welcome to DevOps Certification Program\");
+> System.out.println(\"### Initial Code Modified ###\");
+> System.out.println(\"### This code is entered at GitLab ###\");
+> Sensitivity: Internal & Restricted
+> System.out.println(\"### This code is modified after clone ###\");
+> System.out.println(\"### Adding a new feature ###\");
+> }
+> }" > Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### This code is entered at GitLab ###");
+Sensitivity: Internal & Restricted
+System.out.println("### This code is modified after clone ###");
+System.out.println("### Adding a new feature ###");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=987bc5e 2018-08-21 | Cloned and Modified (HEAD -> newfeature, tag: v1.0, master) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ ckle[K[K[Klear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit -a -m "Adding New Feature"
+[newfeature 71559aa] Adding New Feature
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #[newfeature 8ef7ee4] Adding New Feature
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #...
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #33. While the code is modified on "newfeature", the code on master stil l remain the same:
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Switched to branch 'master'
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Your branch is up-to-date with 'origin/master'.
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+* [32mmaster[m
+  newfeature[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #* master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #newfeature
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=987bc5e 2018-08-21 | Cloned and Modified (HEAD -> master, tag: v1.0) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #c18ea63 2018-07-19 | Cloned and Modified (HEAD -> master, tag: v1.0, or igin/master, origin/HEAD) [Prakash]
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #...
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### Git Modified ###");
+System.out.println("### Modified after clone ###");
+}
+} 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #34. Assuming that some new feature is developed and tested on the branc h "newfeature", now you may merge these changes to the code on "main" branch:
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+* [32mmaster[m
+  newfeature[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #* master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #newfeature 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git merge newfeature
+Updating 987bc5e..71559aa
+Fast-forward
+ Welcome.java | 8 [32m+++++[m[31m---[m
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Updating c18ea63..8ef7ee4
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Fast-forward
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #Welcome.java | 1 +
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #1 file changed, 1 insertion(+) 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git branch
+* [32mmaster[m
+  newfeature[m
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #* master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #newfeature 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git log --pretty=format:"%h %ad | %s%d [%an]" --date=short
+[?1h=71559aa 2018-08-21 | Adding New Feature (HEAD -> master, newfeature) [serdeen][m
+987bc5e 2018-08-21 | Cloned and Modified (tag: v1.0) [serdeen][m
+34aa494 2018-08-21 | Git Modified (origin/master, origin/HEAD) [serdeen][m
+a3a83d2 2018-08-21 | Modified Code-2 [serdeen][m
+c0c3a8c 2018-08-21 | Modified Code-1 [serdeen][m
+54bfc25 2018-08-21 | initial commit [serdeen][m
+[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #8ef7ee4 2018-07-19 | Adding New Feature (HEAD -> master, newfeature) [P rakash]
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ #...
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ cat Welcome.java
+class Welcome{
+public static void main(String[] args){
+System.out.println("Welcome to DevOps Certification Program");
+System.out.println("### Initial Code Modified ###");
+System.out.println("### This code is entered at GitLab ###");
+Sensitivity: Internal & Restricted
+System.out.println("### This code is modified after clone ###");
+System.out.println("### Adding a new feature ###");
+}
+}
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ javac Welcome.java 
+Welcome.java:6: error: not a statement
+Sensitivity: Internal & Restricted
+                      ^
+Welcome.java:6: error: ';' expected
+Sensitivity: Internal & Restricted
+                                  ^
+2 errors
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ java Welcome
+Error: Could not find or load main class Welcome
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ java Welcome.Welcome/Welcome
+Error: Could not find or load main class ..Welcome
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ java ./Welcome^C
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ ls -lrt
+total 4
+-rw-r--r-- 1 osgdev docker 389 Aug 21 02:41 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ ls -lrtjava ./Welcome[2PWelcomec Welcome.java 
+Welcome.java:6: error: not a statement
+Sensitivity: Internal & Restricted
+                      ^
+Welcome.java:6: error: ';' expected
+Sensitivity: Internal & Restricted
+                                  ^
+2 errors
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ vi Welcome.java 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;24r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[24;1H"Welcome.java" 10L, 389C[>c[1;1H[32mclass[m Welcome{
+[32mpublic[m [32mstatic[m [32mvoid[m main(String[] args){
+System.out.println([31m"Welcome to DevOps Certification Program"[m);
+System.out.println([31m"### Initial Code Modified ###"[m);
+System.out.println([31m"### This code is entered at GitLab ###"[m);
+[38;5;130mSensitivity[m: Internal & Restricted
+System.out.println([31m"### This code is modified after clone ###"[m);
+System.out.println([31m"### Adding a new feature ###"[m);
+}
+}
+[94m~                                                                                                           [12;1H~                                                                                                           [13;1H~                                                                                                           [14;1H~                                                                                                           [15;1H~                                                                                                           [16;1H~                                                                                                           [17;1H~                                                                                                           [18;1H~                                                                                                           [19;1H~                                                                                                           [20;1H~                                                                                                           [21;1H~                                                                                                           [22;1H~                                                                                                           [23;1H~                                                                                                           [m[24;91H1,1[11CAll[1;1H[?12l[?25h[27m[23m[m[H[2J[?25l[1;1H[32mclass[m Welcome{
+[32mpublic[m [32mstatic[m [32mvoid[m main(String[] args){
+System.out.println([31m"Welcome to DevOps Certification Program"[m);
+System.out.println([31m"### Initial Code Modified ###"[m);
+System.out.println([31m"### This code is entered at GitLab ###"[m);
+[38;5;130mSensitivity[m: Internal & Restricted
+System.out.println([31m"### This code is modified after clone ###"[m);
+System.out.println([31m"### Adding a new feature ###"[m);
+}
+}
+[94m~                                                                                                           [12;1H~                                                                                                           [13;1H~                                                                                                           [14;1H~                                                                                                           [15;1H~                                                                                                           [16;1H~                                                                                                           [17;1H~                                                                                                           [18;1H~                                                                                                           [19;1H~                                                                                                           [20;1H~                                                                                                           [21;1H~                                                                                                           [22;1H~                                                                                                           [23;1H~                                                                                                           [m[24;91H1,1[11CAll"Welcome.java" 10L, 389C[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[24;91H2[2;1H[?12l[?25h[?25l[24;91H3[3;1H[?12l[?25h[?25l[24;91H4[4;1H[?12l[?25h[?25l[24;91H5[5;1H[?12l[?25h[?25l[24;91H6[6;1H[?12l[?25h[?25l[6;23r[23;1H
+[1;24r[23;1H[94m~                                                                                                           [m[24;1H[K[24;91H6,1[11CAll[6;1H[?12l[?25h[?25l[24;91H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"Welcome.java" 9L, 354C written
+[?1l>[?12l[?25h[?1049l]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git add Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit "Final"
+error: pathspec 'Final' did not match any file(s) known to git.
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit "Final"[C[C-"Final"m"Final" "Final"
+[master 8ff7f1a] Final
+ 1 file changed, 1 deletion(-)
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit -m "Final"[3P"Final"git -^C
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git og
+git: 'og' is not a git command. See 'git --help'.
+
+Did you mean this?
+	log
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git og[K[Klog
+[?1h=[33mcommit 8ff7f1a166f791632f7a4cc3c091ba1051bae4bb[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:43:17 2018 +0530[m
+[m
+    Final[m
+[m
+[33mcommit 71559aaffca37bd7074518b0a5ddd675b610e178[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:41:20 2018 +0530[m
+[m
+    Adding New Feature[m
+[m
+[33mcommit 987bc5ef81f2f26b0ddedd8c1cda49d24bb2c001[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:30:53 2018 +0530[m
+[m
+    Cloned and Modified[m
+[m
+[33mcommit 34aa4941a02e365e870af4b79689db50a374dd8d[m[m
+Author: serdeen <sergio.mendes@wipro.com>[m
+Date:   Tue Aug 21 02:23:22 2018 +0530[m
+[m
+    Git Modified[m
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K[?1l>]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git commit [K[K[K[K[K[K[K[K[K[K[Kgit status -s
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git push origin master
+Username for 'https://topgear-training-gitlab.wipro.com': serdeen
+Password for 'https://serdeen@topgear-training-gitlab.wipro.com': 
+remote: HTTP Basic: Access denied
+fatal: Authentication failed for 'https://topgear-training-gitlab.wipro.com/SERDEEN/batch6SMM.git/'
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git push origin master
+Username for 'https://topgear-training-gitlab.wipro.com': serdeen	
+Password for 'https://serdeen@topgear-training-gitlab.wipro.com': 
+Counting objects: 9, done.
+Delta compression using up to 2 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 935 bytes | 0 bytes/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+To https://topgear-training-gitlab.wipro.com/SERDEEN/batch6SMM.git
+   34aa494..8ff7f1a  master -> master
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ javac Welcome.java 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ java Welcome 
+Welcome to DevOps Certification Program
+### Initial Code Modified ###
+### This code is entered at GitLab ###
+### This code is modified after clone ###
+### Adding a new feature ###
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ ls -la
+total 20
+drwxr-xr-x  3 osgdev docker 4096 Aug 21 02:44 [0m[01;34m.[0m
+drwxr-xr-x 54 osgdev docker 4096 Aug 21 02:42 [01;34m..[0m
+drwxr-xr-x  8 osgdev docker 4096 Aug 21 02:44 [01;34m.git[0m
+-rw-r--r--  1 osgdev docker  655 Aug 21 02:44 Welcome.class
+-rw-r--r--  1 osgdev docker  354 Aug 21 02:42 Welcome.java
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git -s
+Unknown option: -s
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git -ss-st-sa-st-su-ss-s -s
+[31m??[m Welcome.class
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ git [K[K[K[K
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ clear
+[3;J[H[2J]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ ls -lrt
+total 8
+-rw-r--r-- 1 osgdev docker 354 Aug 21 02:42 Welcome.java
+-rw-r--r-- 1 osgdev docker 655 Aug 21 02:44 Welcome.class
+]0;osgdev@TG-DevOps-OS087: ~/batch6SMM[01;32mosgdev@TG-DevOps-OS087[00m:[01;34m~/batch6SMM[00m$ 3[Kexit
+exit
+
+Script done on Tuesday 21 August 2018 02:46:35 AM IST

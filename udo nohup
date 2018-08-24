@@ -1,0 +1,21 @@
+[0;1;32m●[0m artifactory.service - Setup Systemd script for Artifactory in Tomcat Servlet Engine
+   Loaded: loaded (/lib/systemd/system/artifactory.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Tue 2018-08-21 01:06:03 IST; 35min ago
+  Process: 1518 ExecStart=/opt/jfrog/artifactory/bin/artifactoryManage.sh start (code=exited, status=0/SUCCESS)
+ Main PID: 1967 (java)
+    Tasks: 0
+   Memory: 15.6M
+      CPU: 704ms
+   CGroup: /system.slice/artifactory.service
+           ‣ 1967 /usr/bin/java -Djava.util.logging.config.file=/opt/jfrog/artifactory/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -server -Xms512m -Xmx2g -Xss256k -XX:+UseG1GC -XX:OnOutOfMemoryError=kill -9 %p -Djruby.compile.invokedynamic=false -Dfile.encoding=UTF8 -Dartdist=deb -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -Djava.security.egd=file:/dev/./urandom -Dartifactory.home=/var/opt/jfrog/artifactory -Dignore.endorsed.dirs= -classpath /opt/jfrog/artifactory/tomcat/bin/bootstrap.jar:/opt/jfrog/artifactory/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/jfrog/artifactory/tomcat -Dcatalina.home=/opt/jfrog/artifactory/tomcat -Djava.io.tmpdir=/opt/jfrog/artifactory/tomcat/temp org.apache.catalina.startup.Bootstrap start
+
+Aug 21 01:05:53 TG-DevOps-OS087 su[1918]: + ??? root:artifactory
+Aug 21 01:05:53 TG-DevOps-OS087 su[1918]: pam_unix(su:session): session opened for user artifactory by (uid=0)
+Aug 21 01:05:53 TG-DevOps-OS087 artifactoryManage.sh[1518]: Max number of open files: 1024
+Aug 21 01:05:53 TG-DevOps-OS087 artifactoryManage.sh[1518]: Using ARTIFACTORY_HOME: /var/opt/jfrog/artifactory
+Aug 21 01:05:53 TG-DevOps-OS087 artifactoryManage.sh[1518]: Using ARTIFACTORY_PID: /var/opt/jfrog/run/artifactory.pid
+Aug 21 01:05:53 TG-DevOps-OS087 artifactoryManage.sh[1518]: Existing PID file found during start.
+Aug 21 01:05:53 TG-DevOps-OS087 artifactoryManage.sh[1518]: Removing/clearing stale PID file.
+Aug 21 01:05:53 TG-DevOps-OS087 artifactoryManage.sh[1518]: Tomcat started.
+Aug 21 01:06:03 TG-DevOps-OS087 artifactoryManage.sh[1518]: Artifactory Tomcat started in normal mode
+Aug 21 01:06:03 TG-DevOps-OS087 systemd[1]: Started Setup Systemd script for Artifactory in Tomcat Servlet Engine.

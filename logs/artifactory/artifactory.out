@@ -1,0 +1,519 @@
+/usr/bin/java
+Max number of open files: 1024
+Using ARTIFACTORY_HOME: /var/opt/jfrog/artifactory
+Using ARTIFACTORY_PID: /var/opt/jfrog/run/artifactory.pid
+Aug 21, 2018 1:42:21 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8081"]
+Aug 21, 2018 1:42:21 AM org.apache.catalina.core.StandardService initInternal
+SEVERE: Failed to initialize connector [Connector[HTTP/1.1-8081]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8081]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:632)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1086)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:268)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:68)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
+	... 13 more
+
+Aug 21, 2018 1:42:21 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8040"]
+Aug 21, 2018 1:42:21 AM org.apache.catalina.core.StandardService initInternal
+SEVERE: Failed to initialize connector [Connector[HTTP/1.1-8040]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8040]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:632)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1086)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:268)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:68)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
+	... 13 more
+
+Aug 21, 2018 1:42:21 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8019"]
+Aug 21, 2018 1:42:21 AM org.apache.catalina.core.StandardService initInternal
+SEVERE: Failed to initialize connector [Connector[AJP/1.3-8019]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8019]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:632)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1086)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:268)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
+	... 13 more
+
+Aug 21, 2018 1:42:21 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Aug 21, 2018 1:42:21 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.32
+Aug 21, 2018 1:42:21 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor [/opt/jfrog/artifactory/tomcat/conf/Catalina/localhost/access.xml]
+Aug 21, 2018 1:42:21 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor [/opt/jfrog/artifactory/tomcat/conf/Catalina/localhost/artifactory.xml]
+2018-08-21 01:42:24 [UNDEFINED] [INFO ] Fetched Artifactory [artifactory.home=null] from servlet context
+2018-08-21 01:42:24 [UNDEFINED] [INFO ] Resolved Artifactory home by logger [artifactory.home=/var/opt/jfrog/artifactory].
+01:42:25.176 [localhost-startStop-2] WARN org.artifactory.version.ArtifactoryVersionReader - Closest matched version: 5.9.0
+01:42:25.218 [localhost-startStop-2] DEBUG org.artifactory.converter.VersionProviderImpl - Last Artifactory database version is: v590
+01:42:25.275 [localhost-startStop-2] INFO org.artifactory.converter.ConvertersManagerImpl - Triggering PRE_INIT conversion, from v590 to v620
+01:42:25.277 [localhost-startStop-2] INFO org.artifactory.converter.ConvertersManagerImpl - Finished PRE_INIT conversion, current version is: v620
+2018-08-21 01:42:25 [ARTIFACTORY] [INFO ] Master key file found.
+     /\
+    /  \   ___ ___ ___  ___ ___
+   / /\ \ / __/ __/ _ \/ __/ __|
+  / ____ \ (_| (_|  __/\__ \__ \
+ /_/    \_\___\___\___||___/___/
+Access Version:  4.1.5
+Access Revision: 40105900
+
+
+2018-08-21 01:42:32.183  INFO 21500 --- [ost-startStop-1] o.j.a.s.startup.AccessHomeFinderImpl     : Using JFrog Access home at '/var/opt/jfrog/artifactory/access' resolved from: System property (Artifactory)
+2018-08-21 01:42:33,144 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.c.JFrogApplicationContextInitializer:74) - Using JFrog Access home at '/var/opt/jfrog/artifactory/access'
+2018-08-21 01:42:33,221 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.AccessApplication:48) - Starting AccessApplication v4.1.5 on TG-DevOps-OS087 with PID 21500 (/opt/jfrog/artifactory/tomcat/webapps/access/WEB-INF/lib/access-application-4.1.5.jar started by root in /home/osgdev/Worklog)
+2018-08-21 01:42:33,222 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.AccessApplication:597) - The following profiles are active: production,grpc
+01:42:35.175 [localhost-startStop-2] DEBUG org.jfrog.storage.util.DbUtils - My schema name is: APP
+01:42:35.744 [localhost-startStop-2] DEBUG org.jfrog.storage.util.DbUtils - Found table: MASTER_KEY_STATUS. Result: 
+01:42:36.150 [localhost-startStop-2] WARN org.artifactory.version.ArtifactoryVersionReader - Closest matched version: 5.9.0
+01:42:36.150 [localhost-startStop-2] DEBUG org.artifactory.converter.VersionProviderImpl - Last Artifactory database version is: v590
+01:42:36.329 [localhost-startStop-2] INFO org.artifactory.converter.ConvertersManagerImpl - Triggering HOME_SYNC_FILES conversion, from v590 to v620
+01:42:36.330 [localhost-startStop-2] INFO org.artifactory.converter.ConvertersManagerImpl - Finished HOME_SYNC_FILES conversion, current version is: v620
+01:42:36.331 [localhost-startStop-2] DEBUG org.jfrog.storage.util.DbUtils - My schema name is: APP
+01:42:36.337 [localhost-startStop-2] DEBUG org.jfrog.storage.util.DbUtils - Found table: CONFIGS. Result: 
+2018-08-21 01:42:36 [ARTIFACTORY] [INFO ] Starting file sync
+01:42:36.360 [Thread-3] INFO org.jfrog.config.watch.FileWatchingManager - Starting watch of folder configurations
+2018-08-21 01:42:36 [ARTIFACTORY] [INFO ] [Node ID: e83671117ed57be3:-232e90d3:16558f792c1:-8000] detected local modify for config 'artifactory.system.properties'
+2018-08-21 01:42:36 [ARTIFACTORY] [INFO ] [Node ID: e83671117ed57be3:-232e90d3:16558f792c1:-8000] detected local modify for config 'artifactory.mimeType'
+01:42:37.226 [localhost-startStop-2] INFO org.artifactory.converter.ConvertersManagerImpl - Triggering HOME_FILES conversion, from v590 to v620
+01:42:37.264 [localhost-startStop-2] INFO org.artifactory.converter.ConvertersManagerImpl - Finished HOME_FILES conversion, current version is: v620
+2018-08-21 01:42:38 [ARTIFACTORY] [INFO ] Starting Artifactory [artifactory.home=/var/opt/jfrog/artifactory].
+2018-08-21 01:42:38,689 [art-init] [INFO ] (o.a.w.s.ArtifactoryContextConfigListener:265) - 
+                _   _  __           _                      ____   _____ _____
+     /\        | | (_)/ _|         | |                    / __ \ / ____/ ____|
+    /  \   _ __| |_ _| |_ __ _  ___| |_ ___  _ __ _   _  | |  | | (___| (___
+   / /\ \ | '__| __| |  _/ _` |/ __| __/ _ \| '__| | | | | |  | |\___ \\___ \
+  / ____ \| |  | |_| | || (_| | (__| || (_) | |  | |_| | | |__| |____) |___) |
+ /_/    \_\_|   \__|_|_| \__,_|\___|\__\___/|_|   \__, |  \____/|_____/_____/
+ Version:  6.2.0                                   __/ |
+ Revision: 60200900                               |___/
+ Artifactory Home: '/var/opt/jfrog/artifactory'
+
+Aug 21, 2018 1:42:39 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor [/opt/jfrog/artifactory/tomcat/conf/Catalina/localhost/artifactory.xml] has finished in [17,631] ms
+2018-08-21 01:42:39,332 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:496) - Artifactory application context set to NOT READY by refresh
+2018-08-21 01:42:39,333 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:236) - Refreshing artifactory: startup date [Tue Aug 21 01:42:39 IST 2018]; root of context hierarchy
+2018-08-21 01:42:45,086 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.s.d.u.AccessJdbcHelperImpl:135) - Database: Apache Derby 10.11.1.1 - (1616546). Driver: Apache Derby Embedded JDBC Driver 10.11.1.1 - (1616546)
+2018-08-21 01:42:45,087 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.s.d.u.AccessJdbcHelperImpl:138) - Connection URL: jdbc:derby:/var/opt/jfrog/artifactory/data/derby
+2018-08-21 01:42:46,924 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.c.s.InternalConfigurationServiceBase:117) - Loading configuration from db finished successfully
+2018-08-21 01:42:48,567 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.s.m.MasterKeyBootstrapper:52) - Found master.key file at /var/opt/jfrog/artifactory/etc/security/master.key, using it as master.key
+2018-08-21 01:42:49,503 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.s.s.t.TokenServiceImpl:99) - Scheduling task for revoking expired tokens using cron expression: 0 0 0/1 * * ?
+2018-08-21 01:42:49,607 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.s.r.c.RpcServiceInvoker:78) - Added service: sync
+2018-08-21 01:42:50,318 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.s.AccessServerBootstrapImpl:103) - [ACCESS BOOTSTRAP] Starting JFrog Access bootstrap...
+2018-08-21 01:42:51,602 [art-init] [INFO ] (o.a.s.d.DbServiceImpl:244) - Database: Apache Derby 10.11.1.1 - (1616546). Driver: Apache Derby Embedded JDBC Driver 10.11.1.1 - (1616546) Pool: derby
+2018-08-21 01:42:51,602 [art-init] [INFO ] (o.a.s.d.DbServiceImpl:247) - Connection URL: jdbc:derby:/var/opt/jfrog/artifactory/data/derby
+2018-08-21 01:42:51,799 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.s.AccessServerBootstrapImpl:156) - [ACCESS BOOTSTRAP] Updating server '75d222ce-ebb2-46ab-a718-151dbadc791f' private key finger print to: 10c04b28e0725ecc017d8b0b67c9598e4d141abb6ad835b1490e60e1ea5b5499
+2018-08-21 01:42:52,156 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.s.AccessServerBootstrapImpl:118) - [ACCESS BOOTSTRAP] JFrog Access bootstrap finished.
+2018-08-21 01:42:53,190 [art-init] [INFO ] (o.j.s.b.p.t.BinaryProviderClassScanner:76) - Added 'blob' from jar:file:/opt/jfrog/artifactory/tomcat/webapps/artifactory/WEB-INF/lib/artifactory-storage-db-6.2.0.jar!/
+2018-08-21 01:42:53,218 [art-init] [INFO ] (o.j.s.b.p.t.BinaryProviderClassScanner:76) - Added 'empty, external-file, external-wrapper, file-system, cache-fs, retry' from jar:file:/opt/jfrog/artifactory/tomcat/webapps/artifactory/WEB-INF/lib/binary-store-core-3.1.3.jar!/
+2018-08-21 01:42:57,632 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.c.RefreshableScheduledJob:52) - Scheduling heartbeat task to run every 5 seconds
+2018-08-21 01:43:01,199 [art-init] [INFO ] (o.a.s.ArtifactorySchedulerFactoryBean:647) - Starting Quartz Scheduler now
+2018-08-21 01:43:01,461 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:243) - Artifactory context starting up 39 Spring Beans...
+2018-08-21 01:43:01,471 [art-init] [INFO ] (o.a.s.d.v.ArtifactoryDBVersion:106) - Starting database conversion from v590 to v620
+2018-08-21 01:43:01,474 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:70) - Starting schema conversion: /conversion/derby/derby_v208_blob_infos.sql
+2018-08-21 01:43:01,595 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:72) - Finished schema conversion: /conversion/derby/derby_v208_blob_infos.sql
+2018-08-21 01:43:01,596 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:70) - Starting schema conversion: /conversion/derby/derby_v209_bundle_files.sql
+2018-08-21 01:43:01,646 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:72) - Finished schema conversion: /conversion/derby/derby_v209_bundle_files.sql
+2018-08-21 01:43:01,647 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:70) - Starting schema conversion: /conversion/derby/derby_v210_trusted_keys_mandatory.sql
+2018-08-21 01:43:01,753 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:72) - Finished schema conversion: /conversion/derby/derby_v210_trusted_keys_mandatory.sql
+2018-08-21 01:43:01,754 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:70) - Starting schema conversion: /conversion/derby/derby_v211_server_id.sql
+2018-08-21 01:43:02,142 [art-init] [INFO ] (o.a.s.d.v.c.DbSqlConverterUtil:72) - Finished schema conversion: /conversion/derby/derby_v211_server_id.sql
+2018-08-21 01:43:02,143 [art-init] [INFO ] (o.a.s.d.v.ArtifactoryDBVersion:110) - Finished database conversion from v590 to v620
+2018-08-21 01:43:02,412 [art-init] [INFO ] (o.a.d.r.CentralConfigReader:92) - The current Artifactory config schema namespace is 'http://artifactory.jfrog.org/xsd/2.1.5' The provided config does not seem to be compliant with it.
+2018-08-21 01:43:02,558 [art-init] [INFO ] (o.a.d.r.CentralConfigReader:71) - Converting artifactory.config.xml version from 'v210' to 'v215'
+2018-08-21 01:43:02,758 [art-init] [INFO ] (o.a.v.c.v.XrayMinBlockedSeverityAndBlockUnscannedConverter:21) - Starting Xray 'minimumBlockedSeverity' and 'blockUnscannedArtifacts' removal conversion
+2018-08-21 01:43:02,768 [art-init] [INFO ] (o.a.v.c.v.XrayMinBlockedSeverityAndBlockUnscannedConverter:26) - Finished Xray 'minimumBlockedSeverity' and 'blockUnscannedArtifacts' removal conversion
+2018-08-21 01:43:02,771 [art-init] [INFO ] (o.a.v.c.v.PyPIRegistryUrlConverter:25) - Starting PyPI 'pyPIRegistryUrl' conversion
+2018-08-21 01:43:02,773 [art-init] [INFO ] (o.a.v.c.v.PyPIRegistryUrlConverter:29) - Finished PyPI 'pyPIRegistryUrl' conversion
+2018-08-21 01:43:02,773 [art-init] [INFO ] (o.a.v.c.v.AllowCrowdUsersToAccessProfilePageConverter:19) - Starting conversion of allowUserToAccessProfile in Crowd settings
+2018-08-21 01:43:02,776 [art-init] [INFO ] (o.a.v.c.v.GoDefaultLayoutConverter:19) - Starting the go default repository layout conversion
+2018-08-21 01:43:02,778 [art-init] [INFO ] (o.a.v.c.v.GoDefaultLayoutConverter:27) - Conan default repository layout conversion finished successfully
+2018-08-21 01:43:02,786 [art-init] [INFO ] (o.a.v.v.NuGetV3Converter:17) - Starting NuGet 'v3FeedUrl' conversion
+2018-08-21 01:43:02,788 [art-init] [INFO ] (o.a.v.v.NuGetV3Converter:28) - Finished NuGet 'v3FeedUrl' conversion
+2018-08-21 01:43:02,788 [art-init] [INFO ] (o.a.v.c.v.ConanFixDefaultLayoutConverter:25) - Starting conan fix default repository layout conversion
+2018-08-21 01:43:02,789 [art-init] [INFO ] (o.a.v.c.v.ConanFixDefaultLayoutConverter:40) - Conan fix default repository layout conversion finished successfully
+2018-08-21 01:43:02,789 [art-init] [INFO ] (o.a.v.c.v.ConanDefaultDistributionRuleConverter:25) - Starting conan default distribution rule converter
+2018-08-21 01:43:02,790 [art-init] [INFO ] (o.a.v.c.v.ConanDefaultDistributionRuleConverter:37) - Conan convert default distribution rule finished successfully
+2018-08-21 01:43:03,760 [art-init] [INFO ] (o.j.s.c.EncryptionWrapperFactory:33) - createArtifactoryKeyWrapper  EncryptionWrapperBase{ encodingType=ARTIFACTORY_MASTER, topEncrypter=BytesEncrypterBase{ Cipher='DESede',  keyId='zGvvB'}, formatUsed=OldFormat, decrypters=[BytesEncrypterBase{ Cipher='DESede',  keyId='zGvvB'}]}
+2018-08-21 01:43:04,192 [art-init] [INFO ] (o.a.c.CentralConfigServiceImpl:383) - New configuration forced saved.
+2018-08-21 01:43:04,864 [art-init] [INFO ] (o.a.c.CentralConfigServiceImpl:243) - Automatically converting the config file, original will be saved in /var/opt/jfrog/artifactory/etc
+2018-08-21 01:43:05,045 [art-init] [INFO ] (o.a.s.a.AccessServiceImpl:365) - Initialized new service id: jfrt@01c4ame3yy239905hpg7d20vjp
+2018-08-21 01:43:05,258 [art-init] [INFO ] (o.a.s.a.ArtifactoryAccessClientConfigStore:572) - Using Access Server URL: http://localhost:8040/access (bundled) source: detected
+2018-08-21 01:43:05,510 [localhost-startStop-1] [JFrog-Access] [INFO ] (o.j.a.AccessApplication:57) - Started AccessApplication in 39.424 seconds (JVM running for 44.991)
+Aug 21, 2018 1:43:05 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of configuration descriptor [/opt/jfrog/artifactory/tomcat/conf/Catalina/localhost/access.xml] has finished in [44,155] ms
+Aug 21, 2018 1:43:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/opt/jfrog/artifactory/tomcat/webapps/ROOT]
+Aug 21, 2018 1:43:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/opt/jfrog/artifactory/tomcat/webapps/ROOT] has finished in [82] ms
+Aug 21, 2018 1:43:05 AM org.apache.catalina.core.StandardServer await
+SEVERE: StandardServer.await: create[localhost:8015]: 
+java.net.BindException: Address already in use (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:440)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:769)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:715)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:353)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:493)
+
+Aug 21, 2018 1:43:05 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8081"]
+Aug 21, 2018 1:43:05 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8040"]
+Aug 21, 2018 1:43:05 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8019"]
+Aug 21, 2018 1:43:05 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+WARNING: The web application [artifactory] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [artifactory] appears to have started a thread named [Thread-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.fs.LinuxWatchService.poll(Native Method)
+ sun.nio.fs.LinuxWatchService.access$600(LinuxWatchService.java:47)
+ sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:314)
+ java.lang.Thread.run(Thread.java:748)
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [artifactory] appears to have started a thread named [Thread-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingDeque.takeFirst(LinkedBlockingDeque.java:492)
+ java.util.concurrent.LinkedBlockingDeque.take(LinkedBlockingDeque.java:680)
+ sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:118)
+ org.jfrog.config.watch.FileWatchingManager.doWatch(FileWatchingManager.java:68)
+ org.jfrog.config.watch.FileWatchingManager$$Lambda$7/780120842.run(Unknown Source)
+ java.lang.Thread.run(Thread.java:748)
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [artifactory] appears to have started a thread named [art-init] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.util.jar.JarFile.getJarEntry(JarFile.java:223)
+ org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:97)
+ org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:262)
+ org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:281)
+ org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:218)
+ org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:225)
+ org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:2228)
+ org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:829)
+ org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1278)
+ org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1137)
+ org.apache.http.impl.client.HttpClientBuilder.build(HttpClientBuilder.java:1122)
+ org.jfrog.client.http.HttpBuilderBase.build(HttpBuilderBase.java:104)
+ org.jfrog.access.client.AccessClientImpl.createAccessHttpClient(AccessClientImpl.java:59)
+ org.jfrog.access.client.AccessClientImpl.<init>(AccessClientImpl.java:54)
+ org.jfrog.access.client.AccessClientBuilderImpl.create(AccessClientBuilderImpl.java:162)
+ org.artifactory.security.access.AccessServiceImpl.buildAccessClient(AccessServiceImpl.java:300)
+ org.artifactory.security.access.AccessServiceImpl.initAccessService(AccessServiceImpl.java:274)
+ org.artifactory.security.access.AccessServiceImpl.initAccessClientIfNeeded(AccessServiceImpl.java:263)
+ org.artifactory.security.access.AccessServiceImpl.init(AccessServiceImpl.java:257)
+ sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+ sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.lang.reflect.Method.invoke(Method.java:498)
+ org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+ org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+ org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+ org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+ org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+ org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+ org.artifactory.storage.fs.lock.aop.LockingAdvice.invoke(LockingAdvice.java:76)
+ org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+ org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+ com.sun.proxy.$Proxy137.init(Unknown Source)
+ org.artifactory.spring.ArtifactoryApplicationContext.refresh(ArtifactoryApplicationContext.java:251)
+ org.artifactory.spring.ArtifactoryApplicationContext.<init>(ArtifactoryApplicationContext.java:136)
+ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+ sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+ sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+ java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+ org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.configure(ArtifactoryContextConfigListener.java:207)
+ org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.access$200(ArtifactoryContextConfigListener.java:63)
+ org.artifactory.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:88)
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [artifactory] appears to have started a thread named [Tomcat JDBC Pool Cleaner[817256560:1534795971543]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Timer.java:552)
+ java.util.TimerThread.run(Timer.java:505)
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [artifactory] appears to have started a thread named [Timer-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Timer.java:552)
+ java.util.TimerThread.run(Timer.java:505)
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+WARNING: The web application [artifactory] appears to have started a thread named [scheduler_QuartzSchedulerThread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:410)
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@65abecb3]) and a value of type [org.artifactory.common.ArtifactoryHome] (value [org.artifactory.common.ArtifactoryHome@79ae80da]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@65abecb3]) and a value of type [org.artifactory.common.ArtifactoryHome] (value [org.artifactory.common.ArtifactoryHome@79ae80da]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@791810fc]) and a value of type [org.artifactory.storage.db.fs.session.SqlStorageSession] (value [org.artifactory.storage.db.fs.session.SqlStorageSession@1285f90c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@2871519b]) and a value of type [org.springframework.security.core.context.SecurityContextImpl] (value [org.springframework.security.core.context.SecurityContextImpl@ffffffff: Null authentication]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@92cd07b]) and a value of type [org.artifactory.log.logback.ArtifactoryLoggerConfigInfo] (value [org.artifactory.log.logback.ArtifactoryLoggerConfigInfo@389a567c]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:05 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [org.springframework.core.NamedThreadLocal] (value [Transaction synchronizations]) and a value of type [java.util.LinkedHashSet] (value [[org.artifactory.storage.db.spring.SessionSynchronization@212dfd83]]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [org.springframework.core.NamedThreadLocal] (value [Current aspect-driven transaction]) and a value of type [org.springframework.transaction.interceptor.TransactionAspectSupport.TransactionInfo] (value [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@65abecb3]) and a value of type [org.artifactory.common.ArtifactoryHome] (value [org.artifactory.common.ArtifactoryHome@79ae80da]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@70c82a28]) and a value of type [org.artifactory.spring.ArtifactoryApplicationContext] (value [artifactory: startup date [Tue Aug 21 01:42:39 IST 2018]; root of context hierarchy]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@65abecb3]) and a value of type [org.artifactory.common.ArtifactoryHome] (value [org.artifactory.common.ArtifactoryHome@79ae80da]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@70c82a28]) and a value of type [org.artifactory.spring.ArtifactoryApplicationContext] (value [artifactory: startup date [Tue Aug 21 01:42:39 IST 2018]; root of context hierarchy]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@65abecb3]) and a value of type [org.artifactory.common.ArtifactoryHome] (value [org.artifactory.common.ArtifactoryHome@79ae80da]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@70c82a28]) and a value of type [org.artifactory.spring.ArtifactoryApplicationContext] (value [artifactory: startup date [Tue Aug 21 01:42:39 IST 2018]; root of context hierarchy]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@65abecb3]) and a value of type [org.artifactory.common.ArtifactoryHome] (value [org.artifactory.common.ArtifactoryHome@79ae80da]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@65abecb3]) and a value of type [org.artifactory.common.ArtifactoryHome] (value [org.artifactory.common.ArtifactoryHome@79ae80da]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkThreadLocalMapForLeaks
+SEVERE: The web application [artifactory] created a ThreadLocal with key of type [java.lang.InheritableThreadLocal] (value [java.lang.InheritableThreadLocal@70c82a28]) and a value of type [org.artifactory.spring.ArtifactoryApplicationContext] (value [artifactory: startup date [Tue Aug 21 01:42:39 IST 2018]; root of context hierarchy]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [org.apache.http.impl.auth.BasicSchemeFactory]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [org.apache.http.impl.auth.BasicSchemeFactory]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1317)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:799)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1278)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1137)
+	at org.apache.http.impl.client.HttpClientBuilder.build(HttpClientBuilder.java:1163)
+	at org.jfrog.client.http.HttpBuilderBase.build(HttpBuilderBase.java:104)
+	at org.jfrog.access.client.AccessClientImpl.createAccessHttpClient(AccessClientImpl.java:59)
+	at org.jfrog.access.client.AccessClientImpl.<init>(AccessClientImpl.java:54)
+	at org.jfrog.access.client.AccessClientBuilderImpl.create(AccessClientBuilderImpl.java:162)
+	at org.artifactory.security.access.AccessServiceImpl.buildAccessClient(AccessServiceImpl.java:300)
+	at org.artifactory.security.access.AccessServiceImpl.initAccessService(AccessServiceImpl.java:274)
+	at org.artifactory.security.access.AccessServiceImpl.initAccessClientIfNeeded(AccessServiceImpl.java:263)
+	at org.artifactory.security.access.AccessServiceImpl.init(AccessServiceImpl.java:257)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.artifactory.storage.fs.lock.aop.LockingAdvice.invoke(LockingAdvice.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy137.init(Unknown Source)
+	at org.artifactory.spring.ArtifactoryApplicationContext.refresh(ArtifactoryApplicationContext.java:251)
+	at org.artifactory.spring.ArtifactoryApplicationContext.<init>(ArtifactoryApplicationContext.java:136)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.configure(ArtifactoryContextConfigListener.java:207)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.access$200(ArtifactoryContextConfigListener.java:63)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:88)
+
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [org.artifactory.util.TimeUnitFormat]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [org.artifactory.util.TimeUnitFormat]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1317)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1176)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1137)
+	at org.artifactory.storage.db.spring.SessionSynchronization.afterCompletion(SessionSynchronization.java:105)
+	at org.springframework.transaction.support.TransactionSynchronizationUtils.invokeAfterCompletion(TransactionSynchronizationUtils.java:168)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.invokeAfterCompletion(AbstractPlatformTransactionManager.java:997)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.triggerAfterCompletion(AbstractPlatformTransactionManager.java:972)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:876)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:826)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.completeTransactionAfterThrowing(TransactionAspectSupport.java:539)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:285)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.artifactory.storage.fs.lock.aop.LockingAdvice.invoke(LockingAdvice.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy137.init(Unknown Source)
+	at org.artifactory.spring.ArtifactoryApplicationContext.refresh(ArtifactoryApplicationContext.java:251)
+	at org.artifactory.spring.ArtifactoryApplicationContext.<init>(ArtifactoryApplicationContext.java:136)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.configure(ArtifactoryContextConfigListener.java:207)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.access$200(ArtifactoryContextConfigListener.java:63)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:88)
+
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [ch.qos.logback.classic.spi.ThrowableProxy]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [ch.qos.logback.classic.spi.ThrowableProxy]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1317)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1176)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1137)
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:419)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:383)
+	at ch.qos.logback.classic.Logger.log(Logger.java:765)
+	at org.apache.commons.logging.impl.SLF4JLocationAwareLog.error(SLF4JLocationAwareLog.java:216)
+	at org.springframework.transaction.support.TransactionSynchronizationUtils.invokeAfterCompletion(TransactionSynchronizationUtils.java:171)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.invokeAfterCompletion(AbstractPlatformTransactionManager.java:997)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.triggerAfterCompletion(AbstractPlatformTransactionManager.java:972)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:876)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:826)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.completeTransactionAfterThrowing(TransactionAspectSupport.java:539)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:285)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.artifactory.storage.fs.lock.aop.LockingAdvice.invoke(LockingAdvice.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy137.init(Unknown Source)
+	at org.artifactory.spring.ArtifactoryApplicationContext.refresh(ArtifactoryApplicationContext.java:251)
+	at org.artifactory.spring.ArtifactoryApplicationContext.<init>(ArtifactoryApplicationContext.java:136)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.configure(ArtifactoryContextConfigListener.java:207)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.access$200(ArtifactoryContextConfigListener.java:63)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:88)
+
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [ch.qos.logback.core.status.WarnStatus]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [ch.qos.logback.core.status.WarnStatus]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1317)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1176)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1137)
+	at ch.qos.logback.classic.LoggerContext.noAppenderDefinedWarning(LoggerContext.java:186)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:264)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:421)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:383)
+	at ch.qos.logback.classic.Logger.log(Logger.java:765)
+	at org.apache.commons.logging.impl.SLF4JLocationAwareLog.debug(SLF4JLocationAwareLog.java:131)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doCleanupAfterCompletion(DataSourceTransactionManager.java:327)
+	at org.artifactory.storage.db.spring.DbTransactionManager.doCleanupAfterCompletion(DbTransactionManager.java:66)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.cleanupAfterCompletion(AbstractPlatformTransactionManager.java:1012)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:879)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:826)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.completeTransactionAfterThrowing(TransactionAspectSupport.java:539)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:285)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.artifactory.storage.fs.lock.aop.LockingAdvice.invoke(LockingAdvice.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy137.init(Unknown Source)
+	at org.artifactory.spring.ArtifactoryApplicationContext.refresh(ArtifactoryApplicationContext.java:251)
+	at org.artifactory.spring.ArtifactoryApplicationContext.<init>(ArtifactoryApplicationContext.java:136)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.configure(ArtifactoryContextConfigListener.java:207)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener.access$200(ArtifactoryContextConfigListener.java:63)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:88)
+
+Aug 21, 2018 1:43:06 AM org.apache.catalina.loader.WebappClassLoaderBase checkStateForResourceLoading
+INFO: Illegal access: this web application instance has been stopped already. Could not load [org.artifactory.util.ExceptionUtils]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [org.artifactory.util.ExceptionUtils]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1317)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1176)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1137)
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:93)
+
+Exception in thread "art-init" java.lang.NullPointerException
+	at org.artifactory.webapp.servlet.ArtifactoryContextConfigListener$1.run(ArtifactoryContextConfigListener.java:102)
+Aug 21, 2018 1:43:06 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8081"]
+Aug 21, 2018 1:43:06 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8081"]
+Aug 21, 2018 1:43:06 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8040"]
+Aug 21, 2018 1:43:06 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8040"]
+Aug 21, 2018 1:43:06 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8019"]
+Aug 21, 2018 1:43:06 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8019"]

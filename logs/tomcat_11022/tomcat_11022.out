@@ -1,0 +1,6 @@
+Using CATALINA_BASE:   /home/osgdev/tomcat/apache-tomcat-9.0.11
+Using CATALINA_HOME:   /home/osgdev/tomcat/apache-tomcat-9.0.11
+Using CATALINA_TMPDIR: /home/osgdev/tomcat/apache-tomcat-9.0.11/temp
+Using JRE_HOME:        /usr
+Using CLASSPATH:       /home/osgdev/tomcat/apache-tomcat-9.0.11/bin/bootstrap.jar:/home/osgdev/tomcat/apache-tomcat-9.0.11/bin/tomcat-juli.jar
+Tomcat started.

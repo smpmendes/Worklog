@@ -1,0 +1,19 @@
+
+*** Stop/Kill services : Artifactory, Tomcat and Sonar & Config services ***
+Failed to stop mysonarqube.service: Unit mysonarqube.service not loaded.
+############ Start Apache Tomact ############
+############ Start Artifactory ############
+############  Start SonarQube ############
+===1. Setup DB for SonarQube ===
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Database
+information_schema
+mysql
+performance_schema
+pets
+sonar
+sys
+ *** Done creating Database, user and granted privileges too ***
+===2. Configure SonarQube ===
+Starting SonarQube...
+Started SonarQube.
